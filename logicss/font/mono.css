@@ -1,0 +1,18 @@
+/**
+ * LogiCSS - Logic CSS framework
+ * http://logicss.googlecode.com
+ *
+ * Copyright (c) 2007 Marco Del Tongo, http://marcodeltongo.com
+ * Licensed under the MIT license.
+ *
+ * Version: $Id$
+ */
+
+/* -------------------------------------------------------------------------- */
+
+body
+{
+    font-family: Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+/* -------------------------------------------------------------------------- */
