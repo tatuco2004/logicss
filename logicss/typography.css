@@ -1,0 +1,318 @@
+/**
+ * LogiCSS - Logic CSS framework
+ * http://logicss.googlecode.com
+ *
+ * Applies typography styles to content.
+ *
+ * Copyright (c) 2007 Marco Del Tongo, http://marcodeltongo.com
+ * Licensed under the MIT license.
+ *
+ * Version: $Id$
+ */
+
+/* -------------------------------------------------------------------------- */
+
+/*
+    Only content containers gets typography applied.
+*/
+.content
+{
+    line-height:    1.5;
+    text-align:     left;
+}
+
+/*
+    Fonts families for Vista, MacOSX and Linux.
+*/
+.sans
+{
+    font-family: Helvetica, Calibri, Arial, sans-serif;
+}
+.sans2
+{
+    font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
+}
+.sans3
+{
+    font-family: Candara, "Trebuchet MS", Trebuchet, sans-serif;
+}
+.serif
+{
+    font-family: Cambria, "Times New Roman", Times, serif;
+}
+.serif2
+{
+    font-family: Constantia, "Palatino Linotype", Palatino, Georgia, serif;
+}
+.mono
+{
+    font-family: Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+/*
+    Common re-definitions.
+*/
+.content blockquote
+{
+    margin:         1.5em 0 1.5em 1.5em;
+    font-style:     italic;
+}
+.content pre
+{
+    padding:        1.5em;
+    font-family:    Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+.content b, strong, th, thead td
+{
+    font-weight:    bold;
+}
+.content i, cite, em, dfn
+{
+    font-style:     italic;
+}
+.content code, kbd, samp, tt, var
+{
+    font-family:    Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    line-height:    1.2em;
+}
+.content del
+{
+    text-decoration:    line-through;
+}
+.content abbr, acronym {
+    font-size:          85%;
+    text-transform:     uppercase;
+    letter-spacing:     .1em;
+}
+.content a abbr, a acronym
+{
+    border:             none;
+}
+.content abbr[title], acronym[title], dfn[title]
+{
+    cursor:             help;
+    border-bottom:      1px dotted;
+}
+.content sup
+{
+    font-size: 75%;
+    vertical-align: text-top;
+}
+.content sub
+{
+    font-size: 75%;
+    vertical-align: baseline;
+}
+
+/*
+    Headings
+*/
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6
+{
+    font-weight:    bold;
+}
+.content h1
+{
+    font-size:      1.5em;
+    line-height:    2;
+}
+.content h2
+{
+    font-size:      1.4em;
+    line-height:    2.142;
+}
+/* Opera fix */ html:first-child .content h2 { line-height:    2.15; }
+.content h3
+{
+    font-size:      1.3em;
+    line-height:    2.307;
+}
+/* Opera fix */ html:first-child .content h3 { line-height:    2.4; }
+.content h4
+{
+    font-size:      1.2em;
+    line-height:    2.5;
+}
+/* Opera fix */ html:first-child .content h4 { line-height:    2.6; }
+.content h5
+{
+    font-size:      1em;
+    line-height:    3;
+}
+.content h6
+{
+    font-size:      1em;
+    line-height:    3;
+    font-weight:    normal;
+}
+
+/*
+    Paragraphs
+*/
+.content p
+{
+    margin:         0 0 1.5em 0;
+    text-align:     justify;
+}
+.content p+p
+{
+    margin-top:     -1.5em;
+}
+.content p.last
+{
+    margin-bottom:  0;
+}
+.content p img
+{
+    float:          left;
+    margin-right:   .5em;
+    padding:        0;
+}
+.content p img.top
+{
+    margin-top:     0;
+}
+.content blockquote p
+{
+    margin:         0;
+}
+
+/*
+    Lists
+*/
+.content ul, .content ol
+{
+    margin:         0 0 1.5em 1em;
+}
+.content ul ul, .content ol ol
+{
+    margin-bottom:  0;
+}
+.content ul ol, .content ol ol
+{
+    margin-left:    1.5em;
+}
+.content ul {
+    list-style:     disc inside;
+}
+.content ol
+{
+    list-style:     decimal inside;
+}
+.content li
+{
+    text-indent:    -1em;
+}
+.content dl
+{
+    margin:         1em 0 1.5em 0;
+}
+.content dt
+{
+    font-weight:    bold;
+}
+
+/*
+    Tables
+*/
+.content table
+{
+    margin-left:    .1em;
+    margin-bottom:  1.5em;
+    line-height:    1;
+}
+.content caption
+{
+    text-align:     center;
+    line-height:    1.5;
+}
+.content tr
+{
+}
+.content th, .content td
+{
+    line-height:    1.5;
+    padding:        0 .5em;
+}
+
+/*
+    Forms
+*/
+.content form
+{
+    /*
+        Remember to set height to a multiple of 3.
+    */
+}
+.content fieldset
+{
+    line-height:    3;
+}
+.content legend
+{
+}
+.content form ul
+{
+    margin:         0;
+    list-style:     none outside;
+}
+.content form li
+{
+    text-indent:    0;
+}
+.content form li.multi
+{
+}
+.content label
+{
+    font-weight:    bold;
+}
+.content input
+{
+}
+.content input[type='text']
+{
+    font-size:      90%;
+}
+.content textarea
+{
+    height:         10em;
+    width:          30em;
+    padding-bottom: .75em;
+}
+.content .buttons
+{
+    padding-top:    0;
+}
+
+/*
+    Links
+*/
+.content a
+{
+    position: relative; padding: .2em 0;
+}
+
+/*
+    IE/Win hacks.
+*/
+* html .content sub, * html .content sup
+{
+    font-size:  1em;
+}
+*:first-child+html .content sub, *:first-child+html .content sup
+{
+    font-size:  1em;
+}
+* html .content legend
+{
+    position:   relative;
+    left:       -7px;
+}
+*:first-child+html .content legend
+{
+    position:   relative;
+    left:       -7px;
+}
+
+/* -------------------------------------------------------------------------- */
