@@ -1,0 +1,165 @@
+/**
+ * LogiCSS - Logic CSS framework
+ * http://logicss.googlecode.com
+ *
+ * Resets nearly all default browser CSS styles.
+ * Based on: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+ *
+ * Copyright (c) 2007 Marco Del Tongo, http://marcodeltongo.com
+ * Licensed under the MIT license.
+ *
+ * Version: $Id$
+ */
+
+/* -------------------------------------------------------------------------- */
+
+/*    
+    STATUS:
+    
+    - Firefox 2 ---> OK !
+    - Safari 3 Beta ---> OK !
+    - Opera 9.02 ---> OK but PRE, CODE, KBD, SAMP, TT need hacks.
+    - IE ---> A [COLOR], IE/Win don't support inherit. SUB, SUP needed hacks.
+*/
+
+/*
+    Reset nearly every tag but don't touch inputs.
+*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, pre, a, ol, ul, li, img,
+dl, dt, dd, form, fieldset, label, legend, table, caption, tbody, tfoot, thead,
+tr, th, td, applet, object, iframe, blockquote, abbr, acronym, address, big,
+cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong,
+tt, var, sub, sup, u, i, b
+{
+    margin:             0;
+    padding:            0;
+    border:             0;
+    outline-width:      0;
+    font-family:        inherit;
+    font-style:         inherit;
+    font-weight:        inherit;
+    font-size:          1em;
+    vertical-align:     baseline;
+    text-decoration:    none;
+    text-align:         left;
+}
+
+/*
+    Set basic styles to body.
+    Set basic font and 1em size to 10px.
+*/
+body
+{
+    background:     #fff;
+    color:          #333;
+    font-family:    sans-serif;
+    font-size:      75%;
+    font-style:     normal;
+    font-weight:    normal;
+    line-height:    1;
+}
+html>/**/body
+{
+    font-size:      12px !important;
+}
+
+/*
+    Remember to define focus styles or use accessible.css
+*/
+:focus
+{
+    outline:        0;
+}
+
+/*
+    Remove list styles.
+*/
+ol, ul
+{
+    list-style:     none;
+}
+
+/*
+    Tables still need 'cellspacing="0"' in the markup.
+*/
+table
+{
+    border-collapse:    collapse;
+    border-spacing:     0;
+}
+caption, th, td
+{
+    text-align:         left;
+    font-weight:        normal;
+    vertical-align:     top;
+}
+
+/*
+    Remove possible generated quote marks (") from <q>, <blockquote>.
+*/
+blockquote:before, blockquote:after, q:before, q:after
+{
+    content: "";
+}
+blockquote, q
+{
+    quotes: "" "";
+}
+
+/*
+    Clean links.
+*/
+a
+{
+    color:  inherit;
+    color:  expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color : "auto");
+}
+
+/*
+    Disable font attributes in standard browsers.
+*/
+font
+{
+    color: inherit !important;
+    font: inherit !important;
+}
+
+/*
+    Say bye to horizontal rule.
+*/
+hr
+{
+    display: none;
+}
+
+/*
+    Minimum edit of input styles.
+*/
+input, textarea, select
+{
+    margin:         0;
+    padding:        0;
+    font-size:      1em;
+}
+input, select
+{
+    cursor: pointer;
+}
+input[type='text']
+{
+    cursor: text;
+}
+
+/*
+	IE/Win hacks.
+*/
+* html sub, * html sup
+{
+    font-size:  1.2em;
+}
+*:first-child+html sub, *:first-child+html sup
+{
+    font-size:  1.2em;
+}
+
+/* -------------------------------------------------------------------------- */
