@@ -17,9 +17,9 @@
 */
 .content
 {
-    line-height:    1.5;
     text-align:     left;
 }
+
 
 /*
     Fonts families for Vista, MacOSX and Linux.
@@ -54,54 +54,86 @@
 */
 .content blockquote
 {
-    margin:         1.5em 0 1.5em 1.5em;
+    font-size:      .75em;
+    line-height:    1.5;
+    padding:        1.5em;
     font-style:     italic;
+}
+.content q
+{
+    line-height:    1.5;
 }
 .content pre
 {
+    font-size:      .75em;
+    line-height:    1.5;
     padding:        1.5em;
     font-family:    Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 }
-.content b, strong, th, thead td
+.content address
+{
+    font-size:      .75em;
+    line-height:    1.5;
+    font-family:    Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    font-style:     italic;
+}
+.content b,
+.content em,
+.content strong,
+.content th,
+.content thead td
 {
     font-weight:    bold;
 }
-.content i, cite, em, dfn
+.content i,
+.content cite,
+.content em,
+.content dfn
 {
     font-style:     italic;
 }
-.content code, kbd, samp, tt, var
+.content code,
+.content kbd,
+.content samp,
+.content tt,
+.content var
 {
     font-family:    Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-    line-height:    1.2em;
 }
 .content del
 {
     text-decoration:    line-through;
 }
-.content abbr, acronym {
-    font-size:          85%;
+.content abbr,
+.content acronym
+{
+    font-size:          .85em;
     text-transform:     uppercase;
     letter-spacing:     .1em;
 }
-.content a abbr, a acronym
+.content a abbr,
+.content a acronym
 {
     border:             none;
 }
-.content abbr[title], acronym[title], dfn[title]
+.content abbr[title],
+.content acronym[title],
+.content dfn[title]
 {
     cursor:             help;
     border-bottom:      1px dotted;
 }
 .content sup
 {
-    font-size: 75%;
-    vertical-align: text-top;
+    font-size:          .8em;
+    *font-size:         1em;
+    vertical-align:     text-top;
 }
 .content sub
 {
-    font-size: 75%;
-    vertical-align: baseline;
+    font-size:          .8em;
+    *font-size:         1em;
+    vertical-align:     baseline;
 }
 
 /*
@@ -113,35 +145,32 @@
 }
 .content h1
 {
-    font-size:      1.5em;
-    line-height:    2;
+    font-size:      1.25em;
+    line-height:    1.8;
 }
 .content h2
 {
-    font-size:      1.4em;
-    line-height:    2.142;
+    font-size:      1.125em;
+    line-height:    2;
 }
-/* Opera fix */ html:first-child .content h2 { line-height:    2.15; }
 .content h3
 {
-    font-size:      1.3em;
-    line-height:    2.307;
+    font-size:      1em;
+    line-height:    2.25;
 }
-/* Opera fix */ html:first-child .content h3 { line-height:    2.4; }
 .content h4
 {
-    font-size:      1.2em;
-    line-height:    2.5;
+    font-size:      .875em;
+    line-height:    2.57;
 }
-/* Opera fix */ html:first-child .content h4 { line-height:    2.6; }
 .content h5
 {
-    font-size:      1em;
+    font-size:      .75em;
     line-height:    3;
 }
 .content h6
 {
-    font-size:      1em;
+    font-size:      .75em;
     line-height:    3;
     font-weight:    normal;
 }
@@ -151,16 +180,24 @@
 */
 .content p
 {
-    margin:         0 0 1.5em 0;
-    text-align:     justify;
+    font-size:      .75em;
+    line-height:    1.5em;
+}
+.content p.big
+{
+    font-size:      1em;
+    line-height:    2.25em;
+}
+.content p.small
+{
+    font-size:      .625em;
+    line-height:    1.8em;
 }
 .content p+p
 {
-    margin-top:     -1.5em;
 }
 .content p.last
 {
-    margin-bottom:  0;
 }
 .content p img
 {
@@ -175,6 +212,7 @@
 .content blockquote p
 {
     margin:         0;
+    font-size:      1em;
 }
 
 /*
@@ -182,17 +220,20 @@
 */
 .content ul, .content ol
 {
-    margin:         0 0 1.5em 1em;
+    font-size:      .75em;
+    margin:         0 0 0 1em;
 }
 .content ul ul, .content ol ol
 {
+    font-size:      1em;
     margin-bottom:  0;
 }
 .content ul ol, .content ol ol
 {
     margin-left:    1.5em;
 }
-.content ul {
+.content ul
+{
     list-style:     disc inside;
 }
 .content ol
@@ -201,15 +242,25 @@
 }
 .content li
 {
+    font-size:      1em;
+    line-height:    1.5;
+    margin-left:    0;
     text-indent:    -1em;
 }
 .content dl
 {
-    margin:         1em 0 1.5em 0;
+    font-size:      .75em;
+    margin:         0;
 }
 .content dt
 {
+    line-height:    1.5;
     font-weight:    bold;
+}
+.content dd
+{
+    margin-left:    1em;
+    line-height:    1.5;
 }
 
 /*
@@ -217,8 +268,8 @@
 */
 .content table
 {
+    font-size:      .75em;
     margin-left:    .1em;
-    margin-bottom:  1.5em;
     line-height:    1;
 }
 .content caption
@@ -232,7 +283,7 @@
 .content th, .content td
 {
     line-height:    1.5;
-    padding:        0 .5em;
+    padding:        .75em 1em;
 }
 
 /*
@@ -241,15 +292,17 @@
 .content form
 {
     /*
-        Remember to set height to a multiple of 3.
+        Remember to set height to keep baseline.
     */
+    font-size:      1em;
 }
 .content fieldset
 {
-    line-height:    3;
 }
 .content legend
 {
+    font-size:      .75em;
+    line-height:    1.5;
 }
 .content form ul
 {
@@ -259,30 +312,31 @@
 .content form li
 {
     text-indent:    0;
-}
-.content form li.multi
-{
+    clear:          both;
 }
 .content label
 {
     font-weight:    bold;
+    line-height:    3;
 }
-.content input
+.content input,
+.content textarea,
+.content select
 {
-}
-.content input[type='text']
-{
-    font-size:      90%;
+    font-size:      1em;
 }
 .content textarea
 {
     height:         10em;
     width:          30em;
-    padding-bottom: .75em;
+}
+.content input
+{
 }
 .content .buttons
 {
-    padding-top:    0;
+    margin-top:     1em;
+    height:         2em;
 }
 
 /*
@@ -291,28 +345,6 @@
 .content a
 {
     position: relative; padding: .2em 0;
-}
-
-/*
-    IE/Win hacks.
-*/
-* html .content sub, * html .content sup
-{
-    font-size:  1em;
-}
-*:first-child+html .content sub, *:first-child+html .content sup
-{
-    font-size:  1em;
-}
-* html .content legend
-{
-    position:   relative;
-    left:       -7px;
-}
-*:first-child+html .content legend
-{
-    position:   relative;
-    left:       -7px;
 }
 
 /* -------------------------------------------------------------------------- */

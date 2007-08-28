@@ -14,15 +14,6 @@
 /* -------------------------------------------------------------------------- */
 
 /*
-    STATUS:
-
-    - Firefox 2 ---> OK !
-    - Safari 3 Beta ---> OK !
-    - Opera 9.02 ---> OK but PRE, CODE, KBD, SAMP, TT need hacks.
-    - IE ---> A [COLOR], IE/Win don't support inherit. SUB, SUP needed hacks.
-*/
-
-/*
     Reset nearly every tag but don't touch inputs.
 */
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, pre, a, ol, ul, li, img,
@@ -39,28 +30,32 @@ tt, var, sub, sup, u, i, b
     font-style:         inherit;
     font-weight:        inherit;
     font-size:          1em;
+    line-height:        1;
     vertical-align:     baseline;
     text-decoration:    none;
     text-align:         left;
+    color:              inherit;
+}
+
+/*
+    Ensure good relative sizes.
+*/
+html
+{
+    font-size:          100.01%;
 }
 
 /*
     Set basic styles to body.
-    Set basic font and 1em size to 10px.
 */
 body
 {
     background:     #fff;
     color:          #333;
     font-family:    sans-serif;
-    font-size:      75%;
     font-style:     normal;
     font-weight:    normal;
     line-height:    1;
-}
-html>/**/body
-{
-    font-size:      12px !important;
 }
 
 /*
@@ -76,7 +71,10 @@ html>/**/body
 */
 ol, ul
 {
-    list-style:     none;
+    list-style:     none inside;
+}
+li
+{
 }
 
 /*
@@ -99,20 +97,19 @@ caption, th, td
 */
 blockquote:before, blockquote:after, q:before, q:after
 {
-    content: "";
+    content:    "";
 }
 blockquote, q
 {
-    quotes: "" "";
+    quotes:     "" "";
 }
 
 /*
     Clean links.
 */
-a
+a:hover
 {
-    color:  inherit;
-    color:  expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color : "auto");
+    text-decoration:    underline;
 }
 
 /*
@@ -120,8 +117,8 @@ a
 */
 font
 {
-    color: inherit !important;
-    font: inherit !important;
+    color:  inherit !important;
+    font:   inherit !important;
 }
 
 /*
@@ -129,7 +126,7 @@ font
 */
 hr
 {
-    display: none;
+    display:    none;
 }
 
 /*
@@ -139,7 +136,7 @@ input, textarea, select
 {
     margin:         0;
     padding:        0;
-    font-size:      1em;
+    font-family:    inherit;
 }
 input, select
 {
@@ -148,18 +145,6 @@ input, select
 input[type='text']
 {
     cursor: text;
-}
-
-/*
-	IE/Win hacks.
-*/
-* html sub, * html sup
-{
-    font-size:  1.2em;
-}
-*:first-child+html sub, *:first-child+html sup
-{
-    font-size:  1.2em;
 }
 
 /* -------------------------------------------------------------------------- */
