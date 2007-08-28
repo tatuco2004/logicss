@@ -1,0 +1,67 @@
+/**
+ * LogiCSS - Logic CSS framework
+ * http://logicss.googlecode.com
+ *
+ * Reset expressions and styles for Internet Explorer.
+ *
+ * Copyright (c) 2007 Marco Del Tongo, http://marcodeltongo.com
+ * Licensed under the MIT license.
+ *
+ * Version: $Id$
+ */
+
+/* -------------------------------------------------------------------------- */
+
+/*
+    NOTE: These expressions are *HEAVY* on the client side,
+    it's best not to use them but add specific rules to your own layout files.
+    
+    "Man advised, half saved."
+*/
+
+/*
+div, span, h1, h2, h3, h4, h5, h6, p, pre, a, ol, ul, li, img,
+dl, dt, dd, form, fieldset, label, legend, table, caption, tbody, tfoot, thead,
+tr, th, td, applet, object, iframe, blockquote, abbr, acronym, address, big,
+cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong,
+tt, var, sub, sup, u, i, b
+{
+    font-family:        expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontFamily : "monospace");
+    font-style:         expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontStyle : "normal");
+    font-weight:        expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontWeight : "normal");
+    color:              expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color : "auto");
+}
+*/
+
+/*
+    Let anchors inherit color.
+*/
+a
+{
+    color:  expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color : "auto");
+}
+
+/*
+    Lists don't get 'none' type.
+*/
+li
+{
+    margin-left: -1em;
+}
+
+/*
+    SUB, SUP need font size adjustments.
+*/
+sub, sup
+{
+    font-size:  1.2em;
+}
+
+/*
+    Legends go wrong.
+*/
+legend
+{
+    position:   relative;
+    _left:      -7px;
+}
