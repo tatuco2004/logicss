@@ -20,7 +20,7 @@
     position:       relative;
     margin:         0 auto;     /* Center container */
     padding:        0;
-    width:          47.5em;     /* 760px (1em = 16px) */
+    width:          47.5em !important;     /* 760px if (1em = 16px) */
     text-align:     left;
     overflow:       hidden;
     clear:          both;

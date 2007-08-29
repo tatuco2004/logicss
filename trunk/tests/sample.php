@@ -21,14 +21,13 @@
         /*
             Add grid
         */
-        @import "../logicss/grid/760.css";
+        @import "../logicss/grid/e24.css";
         
         body
         {
+            /* font-size:	1.25em; */
             background: #ddd;
         }
-        #container { background: white url('gfx/layout_grid.gif'); }
-        #header { height: 100px; }
         #main
         {
             background: white url('gfx/grid32.png');
@@ -40,15 +39,7 @@
 <!-- CONTAINER -->
 <div id="container">
 	<!-- HEADER -->
-	<div id="header">
-	    <!-- SECTIONS -->
-	    <ul id="sections">
-	    	<li><a href="#sample_col1">1st section</a></li>
-			<li><a href="#2">2nd section</a></li>
-			<li><a href="#3">3rd section</a></li>
-		</ul>
-	    <!-- ~SECTIONS -->
-	</div>
+	<div id="header"><img src="gfx/tape.gif" alt="Tape ruler" /></div>
 	<!-- ~HEADER -->
 	<!-- MAIN -->
 	<div id="main" class="clear">
@@ -88,6 +79,19 @@
 	    <div id="sample_col32" class="last column w-14 prepend-8 content" style="background: #efe;"><p>Prepend 8</p></div>
 	    <!-- 1 FULL COLUMN -->
 	    <div id="sample_col" class="column wide-24 content" style="background: #efe;"><p>1</p></div>
+        <!-- DOUBLE COLUMNS -->
+	    <div id="sample_col1b" class="first column w-2 content" style="background: #efe;"><p>1</p></div>
+	    <div id="sample_col2b" class="column wide-2 content" style="background: #efe;"><p>2</p></div>
+	    <div id="sample_col3b" class="column wide-2 content" style="background: #efe;"><p>3</p></div>
+	    <div id="sample_col4b" class="column wide-2 content" style="background: #efe;"><p>4</p></div>
+	    <div id="sample_col5b" class="column wide-2 content" style="background: #efe;"><p>5</p></div>
+	    <div id="sample_col6b" class="column wide-2 content" style="background: #efe;"><p>6</p></div>
+	    <div id="sample_col7b" class="column wide-2 content" style="background: #efe;"><p>7</p></div>
+	    <div id="sample_col8b" class="column wide-2 content" style="background: #efe;"><p>8</p></div>
+	    <div id="sample_col9b" class="column wide-2 content" style="background: #efe;"><p>9</p></div>
+	    <div id="sample_col10b" class="column wide-2 content" style="background: #efe;"><p>10</p></div>
+	    <div id="sample_col11b" class="column wide-2 content" style="background: #efe;"><p>11</p></div>
+	    <div id="sample_col12b" class="last column wide-2 content" style="background: #efe;"><p>12</p></div>
 	    <!-- NAVMENU -->
 	    <ul id="navmenu" class="first col wide-3" style="background: #ff3;">
 			<li><a href="?1">Menu item 1</a></li>
@@ -101,7 +105,7 @@
 	            <p class="big">Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
 	            Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus.</p>
 	            <p class="small">Morbi convallis felis vel nibh. Etiam viverra augue non enim. Duis arcu. Integer dignissim fermentum enim.
-	            Sed scelerisque sagittis lorem. Phasellus sodales. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus.</p>
+	            Sed scelerisque sagittis lorem. Phasellus sodales. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Sed scelerisque sagittis lorem. Phasellus sodales. </p>
 	        </div>
 	        <hr />
 	        <!-- MAIN CONTENT -->
