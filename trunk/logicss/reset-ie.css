@@ -32,15 +32,6 @@ tt, var, sub, sup, u, i, b
     color:              expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color : "auto");
 }
 */
-
-/*
-    Let anchors inherit color.
-*/
-a
-{
-    color:  expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color : "auto");
-}
-
 /*
     Lists don't get 'none' type.
 */
