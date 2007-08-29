@@ -17,16 +17,18 @@
         /*
             Add font family to entire page
         */
-        @import "../logicss/font/sans3.css";
+        @import "../logicss/font/sans.css";
         /*
             Add grid
         */
-        @import "../logicss/grid/760e.css";
+        @import "../logicss/grid/760.css";
         
         body
         {
             background: #ddd;
         }
+        #container { background: white url('gfx/layout_grid.gif'); }
+        #header { height: 100px; }
         #main
         {
             background: white url('gfx/grid32.png');
@@ -81,11 +83,11 @@
 	    <div id="sample_col27" class="column wide-4 content" style="background: #efe;"><p>4</p></div>
 	    <div id="sample_col28" class="column wide-5 content" style="background: #efe;"><p>5</p></div>
 	    <div id="sample_col29" class="column wide-10 content last" style="background: #efe;"><p>10</p></div>
-	    <div id="sample_col30" class="first column w-12 append-12 content" style="background: #efe;"><p>Half + append 12</p></div>
+	    <div id="sample_col30" class="first column h-10 w-12 append-12 content" style="background: #efe;"><p>wide 12 + append 12 + height 10</p></div>
 	    <div id="sample_col31" class="first column wide-2 content" style="background: #efe;"><p>2</p></div>
-	    <div id="sample_col32" class="column w-12 prepend-8 content" style="background: #efe;"><p>Half + prepend 8</p></div>
+	    <div id="sample_col32" class="last column w-14 prepend-8 content" style="background: #efe;"><p>Prepend 8</p></div>
 	    <!-- 1 FULL COLUMN -->
-	    <div id="sample_col" class="first last column wide-24 content" style="background: #efe;"><p>1</p></div>
+	    <div id="sample_col" class="column wide-24 content" style="background: #efe;"><p>1</p></div>
 	    <!-- NAVMENU -->
 	    <ul id="navmenu" class="first col wide-3" style="background: #ff3;">
 			<li><a href="?1">Menu item 1</a></li>
