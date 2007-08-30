@@ -29,12 +29,12 @@
         /*
             Add grid
         */
-        <?php if (isset($_GET['720'])) { ?>
-        @import "../logicss/grid/720.css";
-        <?php } elseif (isset($_GET['760'])) { ?>
-        @import "../logicss/grid/760.css";
+        <?php if (isset($_GET['720p'])) { ?>
+        @import "../logicss/grid/720p.css";
+        <?php } elseif (isset($_GET['760m'])) { ?>
+        @import "../logicss/grid/760m.css";
         <?php } else { ?>
-        @import "../logicss/grid/e24.css";
+        @import "../logicss/grid/e24m.css";
         <?php } # grid ?>
         
         body
@@ -51,10 +51,10 @@
         <?php if (isset($_GET['line'])) { ?>
         .content
         {
-            background: white <?php if (isset($_GET['grid'])) { ?> url('gfx/baseline-18.gif') <?php } ?>;
+            background: white url('gfx/baseline-18.gif');
         }
-        <?php } ?>
-        <?php } # !reset ?>
+        <?php } # line ?>
+        <?php } # !typography ?>
     </style>
     <?php } # !reset ?>
     <?php } # !unstyled ?>
@@ -99,9 +99,12 @@
 	    <div id="sample_col27" class="column wide-4 content" style="background: #efe;"><p>4</p></div>
 	    <div id="sample_col28" class="column wide-5 content" style="background: #efe;"><p>5</p></div>
 	    <div id="sample_col29" class="column wide-10 content last" style="background: #efe;"><p>10</p></div>
+	    <!-- FAT COLUMN -->
 	    <div id="sample_col30" class="first column h-10 w-12 append-12 content" style="background: #efe;"><p>wide 12 + append 12 + height 10</p></div>
+	    <!-- MIXED COLUMNS -->
 	    <div id="sample_col31" class="first column wide-2 content" style="background: #efe;"><p>2</p></div>
-	    <div id="sample_col32" class="last column w-14 prepend-8 content" style="background: #efe;"><p>Prepend 8</p></div>
+	    <div id="sample_col32" class="column w-10 prepend-8 append-1 content" style="background: #efe;"><p>8 + w10 + 1</p></div>
+	    <div id="sample_col33" class="last column wide-3 content" style="background: #efe;"><p>3</p></div>
 	    <!-- 1 FULL COLUMN -->
 	    <div id="sample_col" class="column wide-24 content" style="background: #efe;"><p>1</p></div>
         <!-- DOUBLE COLUMNS -->
@@ -119,7 +122,7 @@
 	    <div id="sample_col12b" class="last column wide-2 content" style="background: #efe;"><p>12</p></div>
 	    <!-- NAVMENU -->
 	    <ul id="navmenu" class="first col wide-3" style="background: #ff3;">
-			<li style="border-bottom: 1px dotted red;"><a href="?1" style="display: block;">Menu item 1</a></li>
+			<li style="border-bottom: 1px dotted red;"><a href="?1">Menu item 1</a></li>
 			<li style="border-bottom: 1px dotted red;"><a href="?2">Menu item 2</a></li>
 			<li style="border-bottom: 1px dotted red;"><a href="?3">Menu item 3</a></li>
 		</ul>
