@@ -50,10 +50,14 @@ body
 {
     float:          left;
     min-height:     24px;
-    _height:        24px;
+    height:         24px;
     margin:         0 4px 8px 4px;
     overflow:       visible;
     clear:          none;
+}
+html>body .column, html>body .col
+{
+    height:         auto;    
 }
 div.column, div.col
 {
