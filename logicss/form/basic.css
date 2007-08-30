@@ -1,0 +1,99 @@
+/**
+ * LogiCSS - Logic CSS framework
+ * http://logicss.googlecode.com
+ *
+ * Applies typography styles to forms inside content containers.
+ *
+ * Copyright (c) 2007 Marco Del Tongo, http://marcodeltongo.com
+ * Licensed under the MIT license.
+ *
+ * Version: $Id$
+ */
+
+/* -------------------------------------------------------------------------- */
+
+/*
+    Only .content forms inside content containers gets typography applied.
+*/
+.content form
+{
+    /*
+        Remember to set height to keep baseline.
+    */
+    font-size:      1em;
+}
+.content fieldset
+{
+}
+.content legend
+{
+    font-size:      .75em;
+    line-height:    1.5;
+}
+.content form ul, 
+.content form ol
+{
+    margin:         0;
+    list-style:     none inside;
+}
+.content form li
+{
+    text-indent:    0;
+    float:          left;
+    clear:          both;
+    line-height:    3;
+}
+.content label
+{
+    display:        block;
+    float:          left;
+    width:          8em;
+    font-weight:    bold;
+    line-height:    3em;
+}
+.content .choices
+{
+    float:          left;
+}
+.content ol label,
+.content .choices label
+{
+    width:          3em;
+}
+.content input
+{
+    margin:         1em .5em 0 .5em;
+    *margin-top:    .75em;
+    float:          left;
+}
+html:first-child .content input
+{
+    margin-top:     .75em;    
+}
+.content input[type="text"]
+{
+    margin-top:     .75em;
+}
+.content input[type="text"]:focus
+{
+    outline:        1px solid invert;
+}
+.content select
+{
+    margin:         .6em .5em 0 .5em;
+    float:          left;
+}
+.content textarea
+{
+    font-size:      1em;
+    height:         10em;
+    width:          30em;
+}
+.content .buttons
+{
+}
+.content .buttons input
+{
+}
+
+/* -------------------------------------------------------------------------- */

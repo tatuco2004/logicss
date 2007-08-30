@@ -1,38 +1,63 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php ob_start ("ob_gzhandler"); ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Logic CSS framework : Sample HTML Page</title>
+    <title>Logic CSS framework : Sample Page</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta http-equiv="imagetoolbar" content="false" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
-    <meta name="description" content="Logic CSS framework : Sample HTML Page" />
+    <meta name="description" content="Logic CSS framework : Sample XHTML Page" />
+    <?php if (!isset($_GET['unstyled'])) { ?>
     <link rel="stylesheet" type="text/css" href="../logicss/reset.css" media="all" />
     <!--[if IE]><link rel="stylesheet" type="text/css" href="../logicss/reset-ie.css" media="all" /><![endif]-->
     <link rel="stylesheet" type="text/css" href="../logicss/print.css" media="print" />
+    <?php if (!isset($_GET['reset'])) { ?>
     <style type="text/css" media="screen, projection">
-        /*
-            Add typography styles to tags with class "content"
-        */
-        @import "../logicss/typography.css";
         /*
             Add font family to entire page
         */
         @import "../logicss/font/sans.css";
         /*
+            Add typography styles to tags with class "content"
+        */
+        @import "../logicss/typography.css";
+        /*
+            Add basic form styling in line with typography
+        */
+        @import "../logicss/form/basic.css";
+
+        <?php if (!isset($_GET['typography'])) { ?>
+        /*
             Add grid
         */
+        <?php if (isset($_GET['720'])) { ?>
+        @import "../logicss/grid/720.css";
+        <?php } elseif (isset($_GET['760'])) { ?>
+        @import "../logicss/grid/760.css";
+        <?php } else { ?>
         @import "../logicss/grid/e24.css";
+        <?php } # grid ?>
         
         body
         {
-            /* font-size:	1.25em; */
-            background: #ddd;
+            <?php if (isset($_GET['big'])) { ?>
+            font-size:  1.25em;
+            <?php } # big ?>
+            background: #eee;
         }
         #main
         {
-            background: white url('gfx/grid32.png');
+            background: white <?php if (isset($_GET['grid'])) { ?> url('gfx/grid32.png') <?php } ?>;
         }
+        <?php if (isset($_GET['line'])) { ?>
+        .content
+        {
+            background: white <?php if (isset($_GET['grid'])) { ?> url('gfx/baseline-18.gif') <?php } ?>;
+        }
+        <?php } ?>
+        <?php } # !reset ?>
     </style>
+    <?php } # !reset ?>
+    <?php } # !unstyled ?>
 </head>
 
 <body>
@@ -94,9 +119,9 @@
 	    <div id="sample_col12b" class="last column wide-2 content" style="background: #efe;"><p>12</p></div>
 	    <!-- NAVMENU -->
 	    <ul id="navmenu" class="first col wide-3" style="background: #ff3;">
-			<li><a href="?1">Menu item 1</a></li>
-			<li><a href="?2">Menu item 2</a></li>
-			<li><a href="?3">Menu item 3</a></li>
+			<li style="border-bottom: 1px dotted red;"><a href="?1" style="display: block;">Menu item 1</a></li>
+			<li style="border-bottom: 1px dotted red;"><a href="?2">Menu item 2</a></li>
+			<li style="border-bottom: 1px dotted red;"><a href="?3">Menu item 3</a></li>
 		</ul>
 	    <!-- CONTENT -->
 	    <div id="content" class="last column wide-21 content">
@@ -109,6 +134,8 @@
 	        </div>
 	        <hr />
 	        <!-- MAIN CONTENT -->
+            <p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
+	            Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus.</p>
 	        <h1>Heading 1</h1>
 	        <p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</p>
 	        <p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</p>
@@ -173,7 +200,7 @@
 	        <h3>Unordered list:</h3>
 	        <ul>
 	            <li>Unordered list 01</li>
-	            <li>Unordered list 02</li>
+	            <li>Unordered list 02<br />with a second line</li>
 	            <li>Unordered list 03
 	                <ul>
 	                    <li>Unordered list inside list level 2</li>
@@ -191,7 +218,7 @@
 	        <h3>Ordered list:</h3>
 	        <ol>
 	            <li>Ordered list 01</li>
-	            <li>Ordered list 02</li>
+	            <li>Ordered list 02<br />with a second line</li>
 	            <li>Ordered list 03
 	                <ol>
 	                    <li>Ordered list inside list level 2</li>
@@ -212,7 +239,7 @@
 	            <dt>Description list title 01</dt>
 	            <dd>Description list description 01</dd>
 	            <dt>Description list title 02</dt>
-	            <dd>Description list description 02</dd>
+	            <dd>Description list description 02<br />with a second line</dd>
 	            <dd>Description list description 03</dd>
 	        </dl>
 	
@@ -248,15 +275,17 @@
 	        <fieldset>
 	            <legend>Form legend</legend>
 	            <ul>
-	            <li><label for="f0">Text input:</label><input type="text"  id="f0" value="input text" /></li>
-	            <li><label for="f1">Text input:</label><input type="text"  id="f1" value="input text" /></li>
+	            <li><label for="f0">Text input:</label><input type="text" id="f0" value="input text" /></li>
+	            <li><label for="f1">Text input:</label><input type="text" id="f1" value="input text" /></li>
 	            <li><label>Radio input:</label>
-	                <input name="RadioGroup1" type="radio" id="f2_0" value="Test" /><label for="f2_0">Yes</label>
-	                <input name="RadioGroup1" type="radio" id="f2_1" value="Test" /><label for="f2_1">No</label>
+	                <ol>
+	                   <li><input name="RadioGroup1" type="radio" id="f2_0" value="Test" /><label for="f2_0">Yes</label></li>
+	                   <li><input name="RadioGroup1" type="radio" id="f2_1" value="Test" /><label for="f2_1">No</label></li>
+	                </ol>
 	            </li>
 	            <li><label>Radio input:</label>
 	                <div class="choices">
-	                    <input name="RadioGroup2" type="radio" id="f2_20" value="Test" /><label for="f2_20">Yes</label>
+	                    <input name="RadioGroup2" type="radio" id="f2_20" value="Test2" /><label for="f2_20">Yes</label>
 	                    <input name="RadioGroup2" type="radio" id="f2_21" value="Test" /><label for="f2_21">No</label>
 	                    <input name="RadioGroup2" type="radio" id="f2_22" value="Test" /><label for="f2_22">Uh?</label>
 	                </div>

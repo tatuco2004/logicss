@@ -13,7 +13,7 @@
 /* -------------------------------------------------------------------------- */
 
 /*
-    NOTE: These expressions are *HEAVY* on the client side,
+    NOTE: The expressions are HEAVY on the client side and may lead to crash,
     it's best not to use them but add specific rules to your own layout files.
     
     "Man advised, half saved."
@@ -32,12 +32,13 @@ tt, var, sub, sup, u, i, b
     color:              expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color : "auto");
 }
 */
+
 /*
-    Lists don't get 'none' type.
+    Lists don't get 'none' type and go broke with margin if more than a line...
 */
-li
+ul, ol
 {
-    margin-left: -16px;
+    text-indent: -16px;
 }
 
 /*
@@ -53,6 +54,5 @@ sub, sup
 */
 legend
 {
-    position:   relative;
-    _left:      -7px;
+    margin-left: -7px;
 }

@@ -2,7 +2,7 @@
  * LogiCSS - Logic CSS framework
  * http://logicss.googlecode.com
  *
- * Applies typography styles to content with 12px fonts on 18px lines.
+ * Applies typography styles to content with [12px] fonts on [18px] lines.
  *
  * Copyright (c) 2007 Marco Del Tongo, http://marcodeltongo.com
  * Licensed under the MIT license.
@@ -199,8 +199,9 @@
     font-size:      1em;
     margin-bottom:  0;
 }
-.content ul ol, .content ol ol
+.content ul ol, .content ol ul
 {
+    font-size:      1em;
     margin-left:    1.5em;
 }
 .content ul
@@ -255,59 +256,6 @@
 {
     line-height:    1.5;
     padding:        .75em 1em;
-}
-
-/*
-    Forms
-*/
-.content form
-{
-    /*
-        Remember to set height to keep baseline.
-    */
-    font-size:      1em;
-}
-.content fieldset
-{
-}
-.content legend
-{
-    font-size:      .75em;
-    line-height:    1.5;
-}
-.content form ul
-{
-    margin:         0;
-    list-style:     none outside;
-}
-.content form li
-{
-    text-indent:    0;
-    clear:          both;
-}
-.content label
-{
-    font-weight:    bold;
-    line-height:    3;
-}
-.content input,
-.content textarea,
-.content select
-{
-    font-size:      1em;
-}
-.content textarea
-{
-    height:         10em;
-    width:          30em;
-}
-.content input
-{
-}
-.content .buttons
-{
-    margin-top:     1em;
-    height:         2em;
 }
 
 /*
