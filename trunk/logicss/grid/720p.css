@@ -64,6 +64,10 @@ div.column, div.col
 {
     display:        inline;     /* Fix for IE double margin bug. */
 }
+.column div, .col div
+{
+    padding:        0;         /* Clean children. */
+}
 
 .first
 {
