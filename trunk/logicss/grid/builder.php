@@ -4,10 +4,14 @@
  * http://logicss.googlecode.com
  * http://logicoder.com/logicss/
  *
- * Copyright (c) 2007 Marco Del Tongo, http://logicoder.com/logicss/AUTHORS
- * Licensed under the MIT license, see http://logicoder.com/logicss/LICENSE
+ * Grid builder.
  *
- * Revision: $Rev$
+ * Copyright (c) 2007 Marco Del Tongo et al.
+ * Licensed under the MIT license.
+ *
+ * $Rev$
+ * $Author$
+ * $HeadURL$
  */
 ?>
 /**
@@ -23,6 +27,10 @@
  * SPACING...:    [ ] Margin     [ ] Padding    [ ] None
  * PRE~APP...:    [ ] Margin     [ ] Padding    [ ] None
  *
- * Copyright (c) 2007 Marco Del Tongo, http://logicoder.com/logicss/AUTHORS
- * Licensed under the MIT license, see http://logicoder.com/logicss/LICENSE
+ * Copyright (c) 2007 Marco Del Tongo et al.
+ * Licensed under the MIT license.
+ *
+ * $Rev$
+ * $Author$
+ * $HeadURL$
  */

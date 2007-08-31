@@ -3,19 +3,18 @@
  * http://logicss.googlecode.com
  * http://logicoder.com/logicss/
  *
- * Font families in classes.
+ * Fonts families for Vista, MacOSX and Linux in classes.
  *
- * Copyright (c) 2007 Marco Del Tongo, http://logicoder.com/logicss/AUTHORS
- * Licensed under the MIT license, see http://logicoder.com/logicss/LICENSE
+ * Copyright (c) 2007 Marco Del Tongo et al.
+ * Licensed under the MIT license.
  *
- * Version: $Id$
+ * $Rev$
+ * $Author$
+ * $HeadURL$
  */
 
 /* -------------------------------------------------------------------------- */
 
-/*
-    Fonts families for Vista, MacOSX and Linux.
-*/
 .sans
 {
     font-family: Calibri, Helvetica, Arial, sans-serif;
