@@ -30,8 +30,8 @@
 }
 .content legend
 {
-    font-size:      .75em;
-    line-height:    1.5;
+    font-size:      1em;
+    line-height:    3;
 }
 .content form ul, 
 .content form ol
@@ -52,7 +52,7 @@
     float:          left;
     width:          8em;
     font-weight:    bold;
-    line-height:    3em;
+    line-height:    3;
 }
 .content .choices
 {
@@ -61,7 +61,7 @@
 .content ol label,
 .content .choices label
 {
-    width:          3em;
+    width:          5em;
 }
 .content input
 {

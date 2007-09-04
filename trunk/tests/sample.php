@@ -296,7 +296,7 @@
 	            <li><label for="f3">Checkbox input:</label><input type="checkbox" id="f3" /></li>
 	            <li><label for="f4">Select field:</label><select id="f4"><option>Option 01</option><option>Option 02</option></select></li>
 	            <li><label for="f5">Textarea:</label><br /><textarea id="f5" rows="10" cols="30">Textarea text</textarea></li>
-	            <li class="buttons"><input type="button" id="f6" value="button text" /><input type="submit" id="f7" value="submit" /></li>
+	            <li class="buttons"><label>&nbsp;</label><input type="button" id="f6" value="button text" /><input type="submit" id="f7" value="submit" /></li>
 	            </ul>
 	        </fieldset>
 	        </form>
