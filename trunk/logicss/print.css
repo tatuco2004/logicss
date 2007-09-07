@@ -1,0 +1,40 @@
+/**
+ * LogiCSS - Logic CSS framework
+ * http://logicss.googlecode.com
+ * http://logicoder.com/logicss/
+ *
+ * CSS styles for printing.
+ *
+ * Copyright (c) 2007 Marco Del Tongo et al.
+ * Licensed under the MIT license.
+ *
+ * $Rev$
+ * $Author$
+ * $HeadURL$
+ */
+
+/* -------------------------------------------------------------------------- */
+
+*
+{
+    background: #fff;
+}
+body
+{
+    font-family: Constantia, "Palatino Linotype", Palatino, Georgia, serif;
+    color: black;
+}
+blockquote
+{
+    font-style: italic;
+}
+a:link, a:visited
+{
+    text-decoration: underline;
+}
+a:after, a:link:after, a:visited:after
+{
+   content: " (" attr(href) ") ";
+}
+
+/* -------------------------------------------------------------------------- */
