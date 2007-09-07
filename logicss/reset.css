@@ -18,7 +18,7 @@
 /*
     Reset nearly every tag but don't touch inputs.
 */
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, pre, a, ol, ul, li, img,
+html, body, div, span, h1, h2, h3, h4, h5, h6, hr, p, pre, a, ol, ul, li, img,
 dl, dt, dd, form, fieldset, label, legend, table, caption, tbody, tfoot, thead,
 tr, th, td, applet, object, iframe, blockquote, abbr, acronym, address, big,
 cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong,
@@ -30,7 +30,7 @@ tt, var, sub, sup, u, i, b
     outline-width:      0;
     font-family:        inherit;
     font-style:         inherit;
-    font-weight:        inherit;
+    font-weight:        normal;
     font-size:          1em;
     line-height:        1;
     vertical-align:     baseline;
@@ -52,17 +52,17 @@ html
 */
 body
 {
-    background:     #fff;
-    color:          #333;
     font-family:    sans-serif;
     font-style:     normal;
     font-weight:    normal;
     font-size:      1em;
     line-height:    1;
+    background:     #eeeeec;
+    color:          #2e3436;
 }
 
 /*
-    Remember to define focus styles or use accessible.css
+    Remember to define focus styles
 */
 :focus
 {
@@ -75,9 +75,6 @@ body
 ol, ul
 {
     list-style:     none inside;
-}
-li
-{
 }
 
 /*
@@ -110,13 +107,17 @@ blockquote, q
 /*
     Clean links.
 */
+a
+{
+    color:  #204a87;
+}
 a:hover
 {
     text-decoration: underline;
 }
 a img
 {
-    border:	    none;
+    border: none;
 }
 
 /*

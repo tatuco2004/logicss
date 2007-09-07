@@ -14,22 +14,20 @@
  * $HeadURL$
  */
 
-ob_start ("ob_gzhandler");
-header("Content-type: text/css; charset: UTF-8");
-
-/**
- * Data container
- */
-$_ = array();
+/*
+    TO DO:
+    
+    - Vertical alignment
+*/
 
 // NAME
 $name = (empty($_POST['name'])) ? "Custom grid" : $_POST['name'];
 // WIDTH
-$width = (is_numeric($_POST['width'])) ? (float)$_POST['width'] : false;
+$width = (isset($_POST['width']) and is_numeric($_POST['width'])) ? (float)$_POST['width'] : false;
 // COLUMNS
-$columns = (is_numeric($_POST['columns'])) ? (int)$_POST['columns'] : false;
+$columns = (isset($_POST['columns']) and is_numeric($_POST['columns'])) ? (int)$_POST['columns'] : false;
 // COLUMN WIDTH
-$col_width = (is_numeric($_POST['col_width'])) ? (float)$_POST['col_width'] : false;
+$col_width = (isset($_POST['col_width']) and is_numeric($_POST['col_width'])) ? (float)$_POST['col_width'] : false;
 // LAYOUT STYLE
 $layout = (isset($_POST['layout'])) ? $_POST['layout'] : "fixed";
 // H-ALIGN
@@ -39,12 +37,9 @@ $valign = (isset($_POST['v-align'])) ? $_POST['v-align'] : false;
 // SPACING
 $spacing = (isset($_POST['spacing'])) ? $_POST['spacing'] : "margin";
 // SPACING VALUE
-$spacing_value = (is_numeric($_POST['spacing_value'])) ? (float)$_POST['spacing_value'] : false;
+$spacing_value = (isset($_POST['spacing_value']) and is_numeric($_POST['spacing_value'])) ? (float)$_POST['spacing_value'] : false;
 // SPACING SIDES
 $spacing_sides = (isset($_POST['spacing_sides'])) ? $_POST['spacing_sides'] : "both";
-// BORDER
-#$border = (is_numeric($_POST['border'])) ? (float)$_POST['border'] : 0;
-$border = 0;
 // SPANNING
 $spanning = (isset($_POST['spanning'])) ? $_POST['spanning'] : "margin";
 // GUTTER
@@ -60,17 +55,43 @@ $unit = ($layout == 'elastic') ? 'em' : (($layout == 'fixed') ? 'px' : '%');
 */
 if ($col_width === false)
 {
-    if (($width == false) or ($columns == false))
+    if (($width === false) or ($columns === false))
     {
         die("To calculate the column width, I need both container width and number of columns.");
     }
-    $col_width = (($unit == 'px') ? ceil($width / $columns) : ($width / $columns)) * .75;
+    $col_width = $width / $columns;
+    if ($spacing !== 'none')
+    {
+        if ($spacing_value === false)
+        {
+            $col_width *= .75;
+        }
+        else
+        {
+            $col_width -= ($spacing_sides !== 'both') ? $spacing_value : $spacing_value * 2;
+        }
+    }
+    $col_width = ($unit == 'px') ? round($col_width) : round($col_width, 2);
 }
 
 /*
     Get or calculate spacing value.
 */
-$space = ($spacing_value !== false) ? $spacing_value : (($unit == 'px') ? ceil($col_width / 6) : $col_width / 6);
+if ($spacing_value === false)
+{
+    if ($spacing_sides !== 'both')
+    {
+        $space = ($unit == 'px') ? round($col_width / 3) : round($col_width / 3, 2);
+    }
+    else
+    {
+        $space = ($unit == 'px') ? round($col_width / 6) : round($col_width / 6, 2);
+    }
+}
+else
+{
+    $space = $spacing_value;
+}
 
 /*
     Setup column spacing.
@@ -97,13 +118,13 @@ switch ($spacing)
 */
 if ($spacing_sides !== 'both')
 {
-    $cut = (($gutter) ? $margin + $padding + $border : 0);
-    $box = $col_width + $margin + $padding + $border;
+    $cut = (($gutter) ? $margin + $padding : 0);
+    $box = $col_width + $margin + $padding;
 }
 else
 {
-    $cut = (($gutter) ? ($margin + $padding + $border) * 2 : 0);
-    $box = $col_width + (($margin + $padding + $border) * 2);
+    $cut = (($gutter) ? ($margin + $padding) * 2 : 0);
+    $box = $col_width + (($margin + $padding) * 2);
 }
 
 /*
@@ -126,6 +147,7 @@ $width = ($columns * $box) - $cut;
 /*
     Define treated selectors.
 */
+$_ = array();
 $_['#container'] = array();
 $_['body'] = array();
 $_['.column'] = array();
@@ -174,48 +196,119 @@ switch ($halign)
 # TO DO !!!
 
 /*
-    Now the columns.
+    Now the Column.
 */
 $_['.column'] = array('float' => 'left', 'overflow' => 'visible', 'clear' => 'none');
 
-if ($spacing_sides !== 'both')
+if ($$spacing != 0) # Setup spacing
 {
-	$_['.column'][$spacing] = "0";
-	$_['.column'][$spacing.'-'.$spacing_sides] = "${$spacing}$unit"; 
+    if ($spacing_sides !== 'both')
+    {
+    	$_['.column'][$spacing.'-'.$spacing_sides] = $$spacing . $unit; 
+    }
+    else
+    {
+    	$_['.column'][$spacing.'-left'] = $$spacing . $unit;
+    	$_['.column'][$spacing.'-right'] = $$spacing . $unit;
+    }
 }
-else
-{
-	$_['.column'][$spacing] = "0 ${$spacing}$unit"; 
-}
+
+/*
+    First and Last.
+*/
 $_['.first'] = array('clear' => 'left');
 $_['.last'] = array('clear' => 'right');
-if ($gutter)
+
+if ($gutter or $$spacing != 0) # Add gutter removal
 {
-    $_['.first'][$spacing.'-left'] = 0 . $unit;
-    $_['.last'][$spacing.'-right'] = 0 . $unit;
+    /*
+        Reset both to mantain compatibility with .padding and .margin
+    */
+    $_['.first']['margin-left'] = 0;
+    $_['.first']['padding-left'] = 0;
+    $_['.last']['margin-right'] = 0;
+    $_['.last']['padding-right'] = 0;
 }
+
+/*
+    Padding and Margin.
+*/
+$_['.padding'] = array();
+$_['.margin'] = array();
+
+if ($$spacing != 0)
+{
+    switch ($spacing) # Prepare only needed ones
+    {
+        case 'margin':
+            if ($spacing_sides !== 'both')
+            {
+            	$_['.padding'][$spacing.'-'.$spacing_sides] = 0;
+            	$_['.padding']['padding-'.$spacing_sides] = $$spacing . $unit;
+            }
+            else
+            {
+                $_['.padding']['margin-left'] = 0;
+                $_['.padding']['margin-right'] = 0;
+                $_['.padding']['padding-left'] = $$spacing . $unit;
+                $_['.padding']['padding-right'] = $$spacing . $unit;
+            }
+        break;
+        case 'padding':
+            if ($spacing_sides !== 'both')
+            {
+            	$_['.margin'][$spacing.'-'.$spacing_sides] = 0;
+            	$_['.margin']['margin-'.$spacing_sides] = $$spacing . $unit;
+            }
+            else
+            {
+                $_['.margin']['margin-left'] = $$spacing . $unit;
+                $_['.margin']['margin-right'] = $$spacing . $unit;
+                $_['.margin']['padding-left'] = 0;
+                $_['.margin']['padding-right'] = 0;
+            }
+        break;
+    }
+}
+
 /*
     Commodity functions.
 */
-function selector ($name, $alt_name = false)
+
+/**
+ * Writes a selector with it's rules.
+ * 
+ * @param   string  $name       Selector tag, id or class name
+ * @param   string  $alt_name   Alternative selector tag, id or class name
+ * @param   string  $empty      Wheter to print empty selectors
+ */
+function selector ($name, $alt_name = false, $empty = false)
 {
     global $_;
-    if (!empty($_[$name]))
-    {
-        $alt_name = ($alt_name !== false) ? ", $alt_name" : '';
-        echo "$name$alt_name\n{\n";
-        rules($_[$name]);
-        echo "}\n";
-    }
+    if (!$empty and empty($_[$name])) return;
+    $alt_name = ($alt_name !== false) ? ", $alt_name" : '';
+    echo "$name$alt_name\n{\n";
+    rules($_[$name]);
+    echo "}\n";
 }
+
+/**
+ * Write CSS rules.
+ */
 function rules (&$data)
 {
     ksort($data);
     foreach ($data as $rule => $value)
     {
-        echo str_pad("    $rule:", 20), $value, ";\n";
+        echo str_pad("    $rule: ", 20), $value, ";\n";
     }    
 }
+
+/*
+    Print the CSS grid.
+*/
+ob_start ("ob_gzhandler");
+header("Content-type: text/css; charset: UTF-8");
 ?>
 /**
  * NAME......:    <?=$name;?> 
@@ -225,10 +318,11 @@ function rules (&$data)
  * LAYOUT....:    <?=ucfirst($layout);?> 
  * H-ALIGN...:    <?=ucfirst($halign);?> 
  * V-ALIGN...:    <?=ucfirst($valign);?> 
- * SPACING...:    <?=ucfirst($spacing);?> [<?=($margin + $padding).$unit;?>]
+ * SPACING...:    <?=ucfirst($spacing);?> <?=ucfirst($spacing_sides);?> [<?=($margin + $padding).$unit;?>]
  * GUTTER....:    <?=($gutter) ? "Removed $cut$unit" : "Present";?> 
- * BORDER....:    <?=$border.$unit;?> 
  * SPANNING..:    <?=ucfirst($spanning);?> 
+ *
+ * Generated by LogiCSS Grid Builder on <?=date('Y-m-d');?>.
  */
 
 /* -------------------------------------------------------------------------- */
@@ -287,39 +381,123 @@ div.column, div.col
 ?>
 
 /*
+    Use these classes to overwrite single columns spacing style.
+*/
+<?php
+    selector('.padding', false, true);
+    selector('.margin', false, true);
+?>
+
+/*
     Use following classes to set column width.
 */
 <?php
     for ($val = $col_width, $i = 1; $i < $columns; ++$i)
     {
-        echo ".span-$i, w-$i { width: $val$unit; }\n";
+        echo ".span-$i, .w$i { width: $val$unit; }\n";
         $val += $box;
     }
-    echo ".span-$i, w-$i { width: $val$unit; " , (($gutter) ? $spacing . ': 0; '  : '') , "}\n";
+    echo ".span-$i, .w$i { width: $val$unit; ",
+        (($gutter or $$spacing != 0) ? $spacing . '-left: 0; '  : ''),
+        (($gutter or $$spacing != 0) ? $spacing . '-right: 0; '  : ''),
+         "}\n";
 ?>
 
 /*
-    Add these to a column to prepend empty columns.
+    Add these to a column to prepend empty columns using default spacing style.
 */
 <?php
     for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
     {
-        echo ".prepend-$i, pre-$i { {$spanning}-left: $val$unit; }\n";
+        echo ".prepend-$i, .pre-$i { {$spanning}-left: $val$unit; }\n";
         $val += $box;
     }
-    echo ".prepend-$i, pre-$i { {$spanning}-left: $val$unit; " , (($gutter) ? $spacing . '-right: 0; '  : '') , "}\n";
+    echo ".prepend-$i, .pre-$i { {$spanning}-left: $val$unit; " , (($gutter or $$spacing != 0) ? $spacing . '-right: 0; '  : '') , "}\n";
 ?>
 
 /*
-    Add these to a column to append empty columns.
+    Add these to a column to append empty columns using default spacing style.
 */
 <?php
     for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
     {
-        echo ".append-$i, app-$i { {$spanning}-right: $val$unit; }\n";
+        echo ".append-$i, .app-$i { {$spanning}-right: $val$unit; }\n";
         $val += $box;
     }
-    echo ".append-$i, app-$i { {$spanning}-right: $val$unit; " , (($gutter) ? $spacing . '-left: 0; '  : '') , "}\n";
+    echo ".append-$i, .app-$i { {$spanning}-right: $val$unit; " , (($gutter or $$spacing != 0) ? $spacing . '-left: 0; '  : '') , "}\n";
+?>
+
+/*
+    Add these to a column to prepend empty columns using left padding spacing style.
+*/
+<?php
+    for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
+    {
+        echo ".pl$i { padding-left: $val$unit; }\n";
+        $val += $box;
+    }
+    echo ".pl$i { padding-left: $val$unit; " , (($gutter or $$spacing != 0) ? 'margin-left: 0; margin-right: 0; '  : '') , "}\n";
+?>
+
+/*
+    Add these to a column to prepend empty columns using right padding spacing style.
+*/
+<?php
+    for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
+    {
+        echo ".pr$i { padding-right: $val$unit; }\n";
+        $val += $box;
+    }
+    echo ".pr$i { padding-right: $val$unit; " , (($gutter or $$spacing != 0) ? 'margin-left: 0; margin-right: 0; '  : '') , "}\n";
+?>
+
+/*
+    Add these to a column to prepend empty columns using centering padding spacing style.
+*/
+<?php
+    for ($val = $box / 2, $i = 1; $i < ($columns - 1); ++$i)
+    {
+        echo ".pc$i { padding-left: $val$unit; padding-right: $val$unit; }\n";
+        $val += $box / 2;
+    }
+    echo ".pc$i { padding-left: $val$unit; padding-right: $val$unit; " , (($gutter or $$spacing != 0) ? 'margin-left: 0; margin-right: 0; '  : '') , "}\n";
+?>
+
+/*
+    Add these to a column to prepend empty columns using left margin spacing style.
+*/
+<?php
+    for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
+    {
+        echo ".ml$i { margin-left: $val$unit; }\n";
+        $val += $box;
+    }
+    echo ".ml$i { margin-left: $val$unit; " , (($gutter or $$spacing != 0) ? 'padding-left: 0; padding-right: 0; '  : '') , "}\n";
+?>
+
+/*
+    Add these to a column to prepend empty columns using right margin spacing style.
+*/
+<?php
+    for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
+    {
+        echo ".mr$i { margin-right: $val$unit; }\n";
+        $val += $box;
+    }
+    echo ".mr$i { margin-right: $val$unit; " , (($gutter or $$spacing != 0) ? 'padding-left: 0; padding-right: 0; '  : '') , "}\n";
+?>
+
+/*
+    Add these to a column to prepend empty columns using centering margin spacing style.
+*/
+<?php
+    for ($val = $box / 2, $i = 1; $i < ($columns - 1); ++$i)
+    {
+        echo ".mc$i { margin-left: $val$unit; margin-right: $val$unit; }\n";
+        $val += $box / 2;
+    }
+    echo ".mc$i { margin-left: $val$unit; margin-right: $val$unit; " ,
+        (($gutter or $$spacing != 0) ? 'padding-left: 0; padding-right: 0; '  : '') , "}\n";
 ?>
 
 /*
@@ -333,6 +511,19 @@ div.column, div.col
 .right
 {
     float:          right;
+}
+
+/*
+    Add this to a div enclosing a row of columns to have them have equal heights.
+*/
+.equal
+{
+    overflow:       hidden;
+}
+.equal .column, .equal .col
+{
+    margin-bottom: -1000px;
+    padding-bottom: 1000px;
 }
 
 /* -------------------------------------------------------------------------- */
