@@ -19,10 +19,10 @@
 <div id="container" style="background: #2e3436; height: 600px;">
     <div id="equal_row" class="equal">
         <div id="a" class="first col w4" style="background: #4e9a06; height: 150px;">
-        A
+        first col w4 height: 150px
         </div>
         <div id="b" class="last col w20" style="background: #5c3566; height: 400px;">
-        B
+        last col w20 height: 400px
         </div>
     </div>    
     <div id="c" class="col w24" style="border-top: 1px dotted pink;">

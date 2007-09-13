@@ -24,99 +24,16 @@
 }
 
 /*
-    Common re-definitions.
+    Remove HR from layout since they are inconsistent.
 */
-.content blockquote
+hr
 {
-    font-size:      .75em;
-    line-height:    1.5;
-    padding:        1.5em;
-    font-style:     italic;
-}
-.content q
-{
-    line-height:    1.5;
-}
-.content pre
-{
-    font-size:      .75em;
-    line-height:    1.5;
-    padding:        1.5em;
-    font-family:    Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-}
-.content address
-{
-    font-size:      .75em;
-    line-height:    1.5;
-    font-family:    Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-    font-style:     italic;
-}
-.content b,
-.content em,
-.content strong,
-.content th,
-.content thead td
-{
-    font-weight:    bold;
-}
-.content i,
-.content cite,
-.content em,
-.content dfn
-{
-    font-style:     italic;
-}
-.content code,
-.content kbd,
-.content samp,
-.content tt,
-.content var
-{
-    font-family:    Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-}
-.content del
-{
-    text-decoration:    line-through;
-}
-.content abbr,
-.content acronym
-{
-    font-size:          .85em;
-    text-transform:     uppercase;
-    letter-spacing:     .1em;
-}
-.content a abbr,
-.content a acronym
-{
-    border:             none;
-}
-.content abbr[title],
-.content acronym[title],
-.content dfn[title]
-{
-    cursor:             help;
-    border-bottom:      1px dotted;
-}
-.content sup
-{
-    font-size:          .8em;
-    *font-size:         1em;
-    vertical-align:     text-top;
-}
-.content sub
-{
-    font-size:          .8em;
-    *font-size:         1em;
-    vertical-align:     baseline;
+    display: none;
 }
 
 /*
-    Headings
+    Headings.
 */
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6
-{
-    font-weight:    bold;
-}
 .content h1
 {
     font-size:      1.25em;
@@ -135,7 +52,7 @@
 .content h4
 {
     font-size:      .875em;
-    line-height:    2.57;
+    line-height:    2.58;
 }
 .content h5
 {
@@ -150,13 +67,18 @@
 }
 
 /*
-    Paragraphs
+    Common styles.
 */
-.content p
+.content p, .content blockquote, .content pre, .content address,
+.content li, .content dt, .content dd, .content table
 {
+    line-height:    1.5;
     font-size:      .75em;
-    line-height:    1.5em;
 }
+
+/*
+    Paragraphs and other text blocks.
+*/
 .content p.big
 {
     font-size:      1em;
@@ -167,75 +89,59 @@
     font-size:      .625em;
     line-height:    1.8em;
 }
-.content p+p
+.content blockquote
 {
-}
-.content p.last
-{
-}
-.content p img
-{
-    float:          left;
-    margin-right:   .5em;
-    padding:        0;
-}
-.content p img.top
-{
-    margin-top:     0;
+    font-style:     italic;
+    margin:         .75em;
+    padding:        .75em;
 }
 .content blockquote p
 {
-    margin:         0;
     font-size:      1em;
 }
 
 /*
-    Lists
+    Inline text tags
 */
-.content ul, .content ol
+.content a
 {
-    font-size:      .75em;
-    margin:         0 0 0 1em;
+    text-decoration:none;
+    border-bottom:  1px dotted;
 }
-.content ul ul, .content ol ol
+.content q
 {
-    font-size:      1em;
-    margin-bottom:  0;
-}
-.content ul ol, .content ol ul
-{
-    font-size:      1em;
-    margin-left:    1.5em;
-}
-.content ul
-{
-    list-style:     disc inside;
-}
-.content ol
-{
-    list-style:     decimal inside;
-}
-.content li
-{
-    font-size:      1em;
     line-height:    1.5;
-    margin-left:    0;
-    text-indent:    -1em;
 }
-.content dl
+.content pre
 {
-    font-size:      .75em;
-    margin:         0;
+    font-family:    Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    margin:         .75em;
+    padding:        .75em;
+}
+.content address
+{
+    font-family:    Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+.content big
+{
+    font-size:      1.2em;
+    line-height:    1.2;
+}
+
+/*
+    Lists.
+*/
+.content li li
+{
+    font-size:      1em;
+}
+.content dl, .content dd
+{
+    margin:         0 0 0 1em;
 }
 .content dt
 {
-    line-height:    1.5;
     font-weight:    bold;
-}
-.content dd
-{
-    margin-left:    1em;
-    line-height:    1.5;
 }
 
 /*
@@ -243,30 +149,16 @@
 */
 .content table
 {
-    font-size:      .75em;
-    margin-left:    .1em;
-    line-height:    1;
+    margin:         0 1em 1.4em 1em;
 }
 .content caption
 {
-    text-align:     center;
     line-height:    1.5;
-}
-.content tr
-{
+    text-align:     center;
 }
 .content th, .content td
 {
     line-height:    1.5;
-    padding:        .75em 1em;
+    margin:         0;
+    padding:        .7em 1em .75em 1em;
 }
-
-/*
-    Links
-*/
-.content a
-{
-    position: relative; padding: .2em 0;
-}
-
-/* -------------------------------------------------------------------------- */

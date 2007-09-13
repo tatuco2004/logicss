@@ -17,20 +17,20 @@
 
 *
 {
-    background: #fff;
+    background:     #fff;
 }
 body
 {
-    font-family: Constantia, "Palatino Linotype", Palatino, Georgia, serif;
-    color: black;
+    color:          black;
+    font-family:    Constantia, "Palatino Linotype", Palatino, Georgia, serif;
 }
 blockquote
 {
-    font-style: italic;
+    font-style:     italic;
 }
 a:link, a:visited
 {
-    text-decoration: underline;
+    text-decoration:underline;
 }
 a:after, a:link:after, a:visited:after
 {
