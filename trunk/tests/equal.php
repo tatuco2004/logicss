@@ -7,8 +7,7 @@
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <meta name="description" content="Logic CSS framework : Sample XHTML Page for equal height columns." />
     <?php if (!isset($_GET['unstyled'])) { ?>
-    <link rel="stylesheet" type="text/css" href="../logicss/reset.css" media="all" />
-    <!--[if IE]><link rel="stylesheet" type="text/css" href="../logicss/reset-ie.css" media="all" /><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../logicss/common.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../logicss/print.css" media="print" />
     <style type="text/css" media="screen, projection">
         @import "../logicss/grid/e24m.css";
