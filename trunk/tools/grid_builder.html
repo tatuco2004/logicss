@@ -14,12 +14,11 @@
     <meta http-equiv="imagetoolbar" content="false" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <meta name="description" content="Logic CSS framework : CSS Grid Builder Form" />
-    <link rel="stylesheet" type="text/css" href="../logicss/reset.css" media="all" />
-    <!--[if IE]><link rel="stylesheet" type="text/css" href="../logicss/reset-ie.css" media="all" /><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../logicss/common.css" media="all" />
     <style type="text/css" media="screen, projection">
         @import "../logicss/font/sans2.css";
         @import "../logicss/typography.css";
-        /*@import "../logicss/form/basic.css";*/
+        @import "../logicss/form/basic.css";
         @import "../logicss/grid/e24m.css";
 
         body
@@ -57,11 +56,11 @@
             <input type="text" id="name" name="name" />
         </li>
         <li><label>LAYOUT:</label>
-            <div class="choices">
+            <span>
                 <input type="radio" value="elastic" name="layout" id="layout_elastic" /><label for="layout_elastic">Elastic <em>em</em></label>
                 <input type="radio" value="liquid" name="layout" id="layout_liquid" /><label for="layout_liquid">Liquid <em>%</em></label>
                 <input type="radio" value="fixed" name="layout" id="layout_fixed" checked="checked" /><label for="layout_fixed">Fixed <em>px</em></label>
-            </div>
+            </span>
         </li>
         <li><label for="columns">COLUMNS:</label>
             <input type="text" id="columns" name="columns" value="24" size="3" />
@@ -73,50 +72,50 @@
             <input type="text" id="col_width" name="col_width" />
         </li>
         <li><label>H-ALIGN:</label>
-            <div class="choices">
+            <span>
                 <input type="radio" value="left" name="h-align" id="h-align_left" /><label for="h-align_left">Left</label>
                 <input type="radio" value="center" name="h-align" id="h-align_center" checked="checked" /><label for="h-align_center">Center</label>
                 <input type="radio" value="right" name="h-align" id="h-align_right" /><label for="h-align_right">Right</label>
-            </div>
+            </span>
         </li>
-        <li><label>V-ALIGN:</label>
-            <ol class="choices">
+        <!--<li><label>V-ALIGN:</label>
+            <ol>
                 <li><input type="radio" value="top" name="v-align" id="v-align_top" checked="checked" /><label for="v-align_top">Top</label></li>
                 <li><input type="radio" value="middle" name="v-align" id="v-align_middle" /><label for="v-align_middle">Middle</label></li>
                 <li><input type="radio" value="bottom" name="v-align" id="v-align_bottom" /><label for="v-align_bottom">Bottom</label></li>
             </ol>
-        </li>
+        </li>-->
         <li><label>SPACING STYLE:</label>
-            <div class="choices">
+            <span>
                 <input type="radio" value="margin" name="spacing" id="spacing_margin" checked="checked" /><label for="spacing_margin">Margin</label>
                 <input type="radio" value="padding" name="spacing" id="spacing_padding" /><label for="spacing_padding">Padding</label>
                 <input type="radio" value="none" name="spacing" id="spacing_none" /><label for="spacing_none">None</label>
-            </div>
+            </span>
         </li>
         <li><label for="spacing_value">SPACING WIDTH:</label>
-            <input type="text" id="spacing_value" name="spacing_value" size="3" value="auto" />
+            <input type="text" id="spacing_value" name="spacing_value" size="5" value="auto" />
         </li>
         <li><label>SPACING SIDES:</label>
-            <div class="choices">
+            <span>
                 <input type="radio" value="left" name="spacing_sides" id="spacing_left" /><label for="spacing_left">Left</label>
                 <input type="radio" value="both" name="spacing_sides" id="spacing_both" checked="checked" /><label for="spacing_both">Both</label>
                 <input type="radio" value="right" name="spacing_sides" id="spacing_right" /><label for="spacing_right">Right</label>
-            </div>
+            </span>
         </li>
         <li><label>SPANNING:</label>
-            <div class="choices">
+            <span>
                 <input type="radio" value="margin" name="spanning" id="spanning_margin" checked="checked" /><label for="spanning_margin">Margin</label>
                 <input type="radio" value="padding" name="spanning" id="spanning_padding" /><label for="spanning_padding">Padding</label>
-            </div>
+            </span>
         </li>
         <li><label for="gutter">GUTTER:</label>
             <input type="checkbox" value="true" name="gutter" id="gutter" />
         </li>
-        <li class="buttons">
-            <label>&nbsp;</label><input type="submit" value="BUILD !" />
-        </li>
     </ul>
     </fieldset>
+    <fieldset class="buttons"><ul>
+        <li><input type="submit" value="BUILD !" /></li>
+    </ul></fieldset>
     </form>
 </div>
 <div id="footer">

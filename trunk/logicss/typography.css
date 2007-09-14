@@ -28,7 +28,7 @@
 */
 hr
 {
-    display: none;
+    display:        none;
 }
 
 /*
@@ -82,12 +82,12 @@ hr
 .content p.big
 {
     font-size:      1em;
-    line-height:    1.125em;
+    line-height:    1.125;
 }
 .content p.small
 {
     font-size:      .625em;
-    line-height:    1.8em;
+    line-height:    1.805;
 }
 .content blockquote
 {
@@ -106,7 +106,10 @@ hr
 .content a
 {
     text-decoration:none;
-    border-bottom:  1px dotted;
+}
+.content a:hover
+{
+    text-decoration:underline;
 }
 .content q
 {
@@ -160,5 +163,8 @@ hr
 {
     line-height:    1.5;
     margin:         0;
-    padding:        .7em 1em .75em 1em;
+    padding:        .7em 1em;
+    *padding-top:   .75em;
 }
+
+/* -------------------------------------------------------------------------- */

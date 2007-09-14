@@ -19,10 +19,12 @@
 /*
     Reset margins and paddings on some block tags
 */
-html, body, address, blockquote, p, pre, h1, h2, h3, h4, h5, h6
+html, body, address, blockquote, p, pre, h1, h2, h3, h4, h5, h6, li,
+form, legend, fieldset, input, textarea, select, form ul, form ol
 {
     margin:         0;
     padding:        0;
+    text-indent:    0;
 }
 
 html
@@ -94,19 +96,6 @@ ul, ol
 {
     margin:             0 0 0 2em;
     padding:            0;
-}
-ul
-{
-    list-style:         disc outside;
-}
-ol
-{
-    list-style:         decimal outside;
-}
-ul li, ol li
-{
-    margin:             0;
-    padding:            0;
     text-indent:        0;
 }
 
@@ -116,31 +105,46 @@ ul li, ol li
 
 input, textarea, select
 {
-    margin:             0;
-    padding:            0;
-    font-family:        sans-serif;
+    font-family:        Calibri, Helvetica, Arial, sans-serif;
     font-size:          1em;
     font-style:         inherit;
     font-weight:        inherit;
 }
-fieldset label
+fieldset
+{
+    border:             0;
+}
+legend
+{
+    color:              #000;
+    line-height:        2.25;
+    font-weight:        bold;
+}
+label
 {
     clear:              left;
     display:            inline-block;
     margin-right:       1em;
 }
-fieldset li
+form li
 {
     list-style:         none;
-    padding-bottom:     1em;
+    padding-bottom:     .75em;
+    padding-top:        .75em;
 }
-fieldset li ol, fieldset li ul
+form li li
 {
-    padding-top:        1em;
+    padding-top:        0;
+    padding-bottom:     1.5em;
 }
-fieldset input
+form li ol, form li ul
 {
-    margin-right:       .5em;    
+    padding-top:        .75em;
+    margin-bottom:      -.75em;
+}
+input
+{
+    margin-right:       .5em;
 }
 input, select, label[for]
 {
@@ -150,9 +154,16 @@ input[type='text'], input[type='password']
 {
     cursor:             text;
 }
+select
+{
+    vertical-align:     top;
+    margin-bottom:      -.5em;
+}
 textarea
 {
-    display:            block;
+    height:             4em;
+    vertical-align:     top;
+    width:              30em;
 }
 
 /*
@@ -162,6 +173,7 @@ textarea
 table
 {
     border-collapse:    collapse;
+    border-color:       #000;
     border-left:        .05em solid;
     border-spacing:     0;
     border-top:         .05em solid;
@@ -175,7 +187,7 @@ td, th
 }
 caption
 {
-    line-height:        1.5em;
+    line-height:        1.5;
 }
 
 /*
