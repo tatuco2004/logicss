@@ -1,0 +1,91 @@
+/**
+ * LogiCSS - Logic CSS framework
+ * http://logicss.googlecode.com
+ * http://logicoder.com/logicss/
+ *
+ * Overload applied typography styles with [16px] fonts on [24px] lines.
+ *
+ * Copyright (c) 2007 Marco Del Tongo et al.
+ * Licensed under the MIT license.
+ *
+ * $Rev$
+ * $Author$
+ * $HeadURL$
+ */
+
+/* -------------------------------------------------------------------------- */
+
+/*
+    Headings.
+*/
+.content h1
+{
+    font-size:      1.5em;
+    line-height:    2;
+}
+.content h2
+{
+    font-size:      1.375em;
+    line-height:    2.18;
+}
+.content h3
+{
+    font-size:      1.25em;
+    line-height:    2.4;
+}
+.content h4
+{
+    font-size:      1.125em;
+    line-height:    2.67;
+}
+.content h5
+{
+    font-size:      1em;
+    line-height:    3;
+}
+.content h6
+{
+    font-size:      1em;
+    line-height:    3;
+    font-weight:    normal;
+}
+
+/*
+    Common styles.
+*/
+.content p, .content blockquote, .content pre, .content address,
+.content li, .content dt, .content dd, .content table
+{
+    line-height:    1.5;
+    font-size:      1em;
+}
+
+/*
+    Paragraphs and other text blocks.
+*/
+.content p.big, .content legend
+{
+    font-size:      1.25em;
+    line-height:    1.2;
+}
+.content p.small
+{
+    font-size:      .75em;
+    line-height:    2;
+}
+.content big
+{
+    font-size:      1.25em;
+    line-height:    1;
+}
+
+/*
+    NOT FROM TYPOGRAPHY.CSS
+*/
+.content legend
+{
+    font-size:      1.25em;
+    line-height:    2.4;
+}
+
+/* -------------------------------------------------------------------------- */

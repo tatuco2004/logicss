@@ -19,11 +19,12 @@
     <?php if (!isset($_GET['reset'])) { ?>
     /*  Add typography styles to tags with class "content" */
     @import "../logicss/typography.css";
-    /*  Add basic form styling in line with typography
-    @import "../logicss/form/basic.css"; */
+    /*  Add basic form styling in line with typography */
+    @import "../logicss/form/basic.css";
 
     <?php if (isset($_GET['big'])) { ?>
-    /* ADD BIG TYPOGRAPHY VARIANT */
+    /* Add full em typography overload */
+    @import "../logicss/fullem.css";
     <?php } # big ?>
     <?php if (isset($_GET['line'])) { ?>
     .content { background: white url('../gfx/baseline-<?=(isset($_GET['big'])) ? '24' : '18' ?>.gif'); }
@@ -200,7 +201,7 @@ I am <u>the u tag</u> example
     <legend>Form legend</legend>
     <ol>
     <li><label for="f0">Text input:</label><input type="text" id="f0" value="input text" /></li>
-    <li><label for="f1">Text input:</label><input type="text" id="f1" value="input text" /></li>
+    <li><label for="f1">Text input:</label><span><input type="password" id="f1" value="input" /></span></li>
     <li><label>Radio input:</label>
         <ol>
            <li><input name="RadioGroup1" type="radio" id="f2_0" value="Test" /><label for="f2_0">Yes</label></li>
@@ -216,10 +217,12 @@ I am <u>the u tag</u> example
     </li>
     <li><label for="f3">Checkbox input:</label><input type="checkbox" id="f3" /></li>
     <li><label for="f4">Select field:</label><select id="f4"><option>Option 01</option><option>Option 02</option></select></li>
-    <li><label for="f5">Textarea:</label><textarea id="f5" rows="10" cols="30">Textarea text</textarea></li>
-    <li><input type="button" id="f6" value="button text" /><input type="submit" id="f7" value="submit" /></li>
+    <li class="textarea"><label for="f5">Textarea:</label><textarea id="f5" rows="10" cols="30">Textarea text</textarea></li>
     </ol>
 </fieldset>
+<fieldset class="buttons"><ul>
+    <li><input type="button" id="f6" value="button text" /><input type="submit" id="f7" value="submit" /></li>
+</ul></fieldset>
 </form>
 <?php } # f ?>
 </body>

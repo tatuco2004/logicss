@@ -369,7 +369,7 @@ div.column, div.col
 */
 .column div, .col div
 {
-    <?=$spacing?>:         0;
+    <?=$spacing?>: 0;
 }
 
 /*
