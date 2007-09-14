@@ -13,19 +13,27 @@
     <link rel="stylesheet" type="text/css" href="../logicss/print.css" media="print" />
 	<style type="text/css" media="screen, projection">
 	/*<![CDATA[*/
+    <?php if (!isset($_GET['nofont'])) { ?>
     /*  Add font family to entire page  */
-    @import "../logicss/font/sans2.css";
+    <?php if (isset($_GET['serif'])) { ?>
+    @import "../logicss/font/serif2.css";
+    <?php } else { ?>
+    @import "../logicss/font/sans.css";
+    <?php } # serif ?>
+    <?php } # !nofont ?>
 
     <?php if (!isset($_GET['reset'])) { ?>
     /*  Add typography styles to tags with class "content" */
-    @import "../logicss/typography.css";
+    <?php if (isset($_GET['big'])) { ?>
+    @import "../logicss/typography/big.css";
+    <?php } else if (isset($_GET['medium'])) { ?>
+    @import "../logicss/typography/medium.css";
+    <?php } else { ?>
+    @import "../logicss/typography/small.css";
+    <?php } # typography ?>
     /*  Add basic form styling in line with typography */
     @import "../logicss/form/basic.css";
 
-    <?php if (isset($_GET['big'])) { ?>
-    /* Add full em typography overload */
-    @import "../logicss/fullem.css";
-    <?php } # big ?>
     <?php if (isset($_GET['line'])) { ?>
     .content { background: white url('../gfx/baseline-<?=(isset($_GET['big'])) ? '24' : '18' ?>.gif'); }
     <?php } # line ?>
