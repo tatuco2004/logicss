@@ -3,7 +3,9 @@
  * http://logicss.googlecode.com
  * http://logicoder.com/logicss/
  *
- * Applies typography styles to content with [12px] fonts on [18px] lines.
+ * Applies typography styles to content.
+ * [font-size:   12px]
+ * [line-height: 18px]
  *
  * Copyright (c) 2007 Marco Del Tongo et al.
  * Licensed under the MIT license.
@@ -62,8 +64,8 @@ hr
 .content h6
 {
     font-size:      .75em;
-    line-height:    3;
     font-weight:    normal;
+    line-height:    3;
 }
 
 /*
@@ -72,8 +74,8 @@ hr
 .content p, .content blockquote, .content pre, .content address,
 .content li, .content dt, .content dd, .content table
 {
-    line-height:    1.5;
     font-size:      .75em;
+    line-height:    1.5;
 }
 
 /*
