@@ -17,11 +17,11 @@
                         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-    <title>XHTML Tags Sampler</title>
+    <title>Logic CSS framework : XHTML Typography Sampler</title>
     <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
     <meta http-equiv="imagetoolbar" content="false" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
-    <meta name="description" content="Logic CSS framework : XHTML Tags Sampler" />
+    <meta name="description" content="Logic CSS framework : XHTML Typography Sampler" />
 	<?php
     if (!isset($_GET['unstyled'])) { 
         echo '<link rel="stylesheet" type="text/css" href="../logicss/common.css" media="all" />' . "\n";
@@ -248,5 +248,6 @@ I am <u>the u tag</u> example
 </ul></fieldset>
 </form>
 <?php } # f ?>
+<p>Copyright &copy; 2007 by <a href="http://marcodeltongo.com">Marco Del Tongo</a> et al. <a href="http://logicoder.com/logicss/LICENSE">Licensed under the MIT license.</a></p>
 </body>
 </html>
