@@ -1,46 +1,61 @@
-<?php ob_start ("ob_gzhandler"); ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<?php
+    function clean ( $mValue )
+    {
+        return preg_replace('/[^\d\w\x80-\xff]/', '', $mValue);
+    }
+    
+    if (empty($_GET))
+    {
+        $_GET['unstyled'] = true;
+    }
+    if (isset($_GET['all']))
+    {
+        $_GET['a'] = $_GET['b'] = $_GET['c'] = $_GET['d'] = $_GET['e'] = $_GET['f'] = true;
+    }
+    ob_start ("ob_gzhandler");
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<?php if (isset($_GET['all'])) { $_GET['a'] = $_GET['b'] = $_GET['c'] = $_GET['d'] = $_GET['e'] = $_GET['f'] = true; }?>
 <head>
     <title>XHTML Tags Sampler</title>
     <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
     <meta http-equiv="imagetoolbar" content="false" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <meta name="description" content="Logic CSS framework : XHTML Tags Sampler" />
-    <?php if (!isset($_GET['unstyled'])) { ?>
-    <link rel="stylesheet" type="text/css" href="../logicss/common.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="../logicss/print.css" media="print" />
-	<style type="text/css" media="screen, projection">
-	/*<![CDATA[*/
-    <?php if (!isset($_GET['nofont'])) { ?>
-    /*  Add font family to entire page  */
-    <?php if (isset($_GET['serif'])) { ?>
-    @import "../logicss/font/serif2.css";
-    <?php } else { ?>
-    @import "../logicss/font/sans.css";
-    <?php } # serif ?>
-    <?php } # !nofont ?>
-
-    <?php if (!isset($_GET['reset'])) { ?>
-    /*  Add typography styles to tags with class "content" */
-    <?php if (isset($_GET['big'])) { ?>
-    @import "../logicss/typography/big.css";
-    <?php } else if (isset($_GET['medium'])) { ?>
-    @import "../logicss/typography/medium.css";
-    <?php } else { ?>
-    @import "../logicss/typography/small.css";
-    <?php } # typography ?>
-    /*  Add basic form styling in line with typography */
-    @import "../logicss/form/basic.css";
-
-    <?php if (isset($_GET['line'])) { ?>
-    .content { background: white url('../gfx/baseline-<?=(isset($_GET['big'])) ? '24' : '18' ?>.gif'); }
-    <?php } # line ?>
-    <?php } # !reset ?>
-	/*]]>*/
-	</style>
-    <?php } # !unstyled ?>
+	<?php
+    if (!isset($_GET['unstyled'])) { 
+        echo '<link rel="stylesheet" type="text/css" href="../logicss/common.css" media="all" />' . "\n";
+        echo '<link rel="stylesheet" type="text/css" href="../logicss/print.css" media="print" />' . "\n";
+        echo '<style type="text/css" media="screen, projection">' . "\n";
+        if (isset($_GET['font']))
+        {
+            $_GET['font'] = clean($_GET['font']);
+            echo "    @import '../logicss/font/{$_GET['font']}.css';\n";
+        }
+        if (isset($_GET['size']))
+        {
+            $_GET['size'] = clean($_GET['size']);
+            echo "    @import '../logicss/typography/{$_GET['size']}.css';\n";
+        }
+        echo "    @import '../logicss/form/basic.css';\n";
+        if (isset($_GET['line']))
+        {
+            switch ($_GET['size'])
+            {
+                case 'small':
+                    echo "    .content { background: white url('../gfx/baseline-18.gif'); }\n";
+                break;
+                case 'medium':
+                    echo "    .content { background: white url('../gfx/baseline-21.gif'); }\n";
+                break;
+                case 'big':
+                    echo "    .content { background: white url('../gfx/baseline-24.gif'); }\n";
+                break;
+            }
+        }
+        echo "    </style>\n";
+    }
+    ?>
 </head>
 <body class="content"><hr />
 <p class="big">BIG P: Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
