@@ -1,0 +1,26 @@
+/**
+ * LogiCSS - Logic CSS framework
+ * http://logicss.googlecode.com
+ * http://logicoder.com/logicss/
+ *
+ * Copyright (c) 2007 Marco Del Tongo et al.
+ * Licensed under the MIT license.
+ *
+ * $Rev$
+ * $Author$
+ * $HeadURL$
+ */
+
+/* -------------------------------------------------------------------------- */
+
+body
+{
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: Cambria, "Times New Roman", Times, serif;
+}
+
+/* -------------------------------------------------------------------------- */
