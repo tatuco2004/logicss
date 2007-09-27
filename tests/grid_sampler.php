@@ -3,7 +3,7 @@
     {
         return preg_replace('/[^\d\w\x80-\xff]/', '', $mValue);
     }
-    
+
     if (!isset($_GET['grid']))
     {
         $_GET['grid'] = 'e24m';
@@ -40,8 +40,9 @@
             <h1>Logic CSS framework : XHTML Grids Sampler</h1>
             <div class="">div</div>
             <div class="first last w24 column">w24</div>
-            
+
             <div class="first col w4">w4</div><div class="last col w20">w20</div>
+
             <div class="first col w8">w8</div><div class="col w8">w8</div><div class="last col w8">w8</div>
 
             <div class="first col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div>

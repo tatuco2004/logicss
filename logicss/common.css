@@ -78,14 +78,17 @@ sup, sub
 {
     font-size:          .75em;
     font-style:         italic;
+    line-height:        1;
+    position:           relative;
+    vertical-align:     baseline;
 }
 sup
 {
-    vertical-align:     top;
+    top:    -.5em;
 }
 sub
 {
-    vertical-align:     baseline;
+    top:    .25em;
 }
 
 /*
