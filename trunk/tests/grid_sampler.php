@@ -38,19 +38,19 @@
         </div>
         <div id="main" class="clear">
             <h1>Logic CSS framework : XHTML Grids Sampler</h1>
-            <div class="">div</div>
-            <div class="first last w24 column">w24</div>
+            <div>empty div</div>
+            <div class="first last w24 column">first last w24 column</div>
 
-            <div class="first col w4">w4</div><div class="last col w20">w20</div>
+            <div class="first col w4">first col w4</div><div class="last col w20">last col w20</div>
 
-            <div class="first col w8">w8</div><div class="col w8">w8</div><div class="last col w8">w8</div>
+            <div class="first col w8">first col w8</div><div class="col w8">col w8</div><div class="last col w8">last col w8</div>
 
-            <div class="first col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div>
-            <div class="col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div>
-            <div class="col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div>
-            <div class="col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div>
-            <div class="col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div>
-            <div class="col w1">w1</div><div class="col w1">w1</div><div class="col w1">w1</div><div class="last col w1">w1</div>
+            <div class="first col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div>
+            <div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div>
+            <div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div>
+            <div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div>
+            <div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div>
+            <div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="col w1">&nbsp;</div><div class="last col w1">&nbsp;</div>
 
             <span class="col w12 mc12">"col w12 mc12" on a span</span>
             <span class="first last col w12 pr12">"col w12 pr12" on a span</span>
