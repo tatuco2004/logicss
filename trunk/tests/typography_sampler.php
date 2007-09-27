@@ -3,12 +3,13 @@
     {
         return preg_replace('/[^\d\w\x80-\xff]/', '', $mValue);
     }
-    
-    if (empty($_GET))
+
+    if (!isset($_GET['font']))
     {
-        $_GET['unstyled'] = true;
+        $_GET['font'] = 'mix';
     }
-    if (isset($_GET['all']))
+    if (!isset($_GET['a']) and !isset($_GET['b']) and !isset($_GET['c']) and
+		!isset($_GET['d']) and !isset($_GET['e']) and !isset($_GET['f']))
     {
         $_GET['a'] = $_GET['b'] = $_GET['c'] = $_GET['d'] = $_GET['e'] = $_GET['f'] = true;
     }
@@ -23,7 +24,7 @@
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <meta name="description" content="Logic CSS framework : XHTML Typography Sampler" />
 	<?php
-    if (!isset($_GET['unstyled'])) { 
+    if (!isset($_GET['unstyled'])) {
         echo '<link rel="stylesheet" type="text/css" href="../logicss/common.css" media="all" />' . "\n";
         echo '<link rel="stylesheet" type="text/css" href="../logicss/print.css" media="print" />' . "\n";
         echo '<style type="text/css" media="screen, projection">' . "\n";
@@ -65,6 +66,7 @@
 <p class="small">SMALL P: Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
     <br />Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus.</p>
 <p>-</p>
+<div id="container">
 <?php if (isset($_GET['a'])) { ?>
 <h1>Heading 1</h1>
 <p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</p>
@@ -248,6 +250,7 @@ I am <u>the u tag</u> example
 </ul></fieldset>
 </form>
 <?php } # f ?>
+</div>
 <p>Copyright &copy; 2007 by <a href="http://marcodeltongo.com">Marco Del Tongo</a> et al. <a href="http://logicoder.com/logicss/LICENSE">Licensed under the MIT license.</a></p>
 </body>
 </html>
