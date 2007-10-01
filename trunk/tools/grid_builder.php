@@ -401,31 +401,31 @@ div.column, div.col
 ?>
 
 /*
-    Add these to a column to prepend empty columns using default spacing style.
+    Add these to prepend empty columns using default spacing style.
 */
 <?php
     for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
     {
-        echo ".prepend-$i, .pre-$i { {$spanning}-left: $val$unit; }\n";
+        echo ".prepend-$i, .pre$i { {$spanning}-left: $val$unit; }\n";
         $val += $box;
     }
-    echo ".prepend-$i, .pre-$i { {$spanning}-left: $val$unit; " , (($gutter or $$spacing != 0) ? $spacing . '-right: 0; '  : '') , "}\n";
+    echo ".prepend-$i, .pre$i { {$spanning}-left: $val$unit; " , (($gutter or $$spacing != 0) ? $spacing . '-right: 0; '  : '') , "}\n";
 ?>
 
 /*
-    Add these to a column to append empty columns using default spacing style.
+    Add these to append empty columns using default spacing style.
 */
 <?php
     for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
     {
-        echo ".append-$i, .app-$i { {$spanning}-right: $val$unit; }\n";
+        echo ".append-$i, .app$i { {$spanning}-right: $val$unit; }\n";
         $val += $box;
     }
-    echo ".append-$i, .app-$i { {$spanning}-right: $val$unit; " , (($gutter or $$spacing != 0) ? $spacing . '-left: 0; '  : '') , "}\n";
+    echo ".append-$i, .app$i { {$spanning}-right: $val$unit; " , (($gutter or $$spacing != 0) ? $spacing . '-left: 0; '  : '') , "}\n";
 ?>
 
 /*
-    Add these to a column to prepend empty columns using left padding spacing style.
+    Add these to prepend empty columns using left padding spacing style.
 */
 <?php
     for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
@@ -437,7 +437,7 @@ div.column, div.col
 ?>
 
 /*
-    Add these to a column to prepend empty columns using right padding spacing style.
+    Add these to append empty columns using right padding spacing style.
 */
 <?php
     for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
@@ -449,7 +449,7 @@ div.column, div.col
 ?>
 
 /*
-    Add these to a column to prepend empty columns using centering padding spacing style.
+    Add these to center columns using padding spacing style.
 */
 <?php
     for ($val = $box / 2, $i = 1; $i < ($columns - 1); ++$i)
@@ -461,19 +461,31 @@ div.column, div.col
 ?>
 
 /*
-    Add these to a column to prepend empty columns using left margin spacing style.
+    Add these to apply a negative left margin spacing style.
 */
 <?php
     for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
     {
-        echo ".ml$i { margin-left: $val$unit; }\n";
+        echo ".pull-$i, .nml$i { margin-left: -$val$unit; position: relative; }\n";
         $val += $box;
     }
-    echo ".ml$i { margin-left: $val$unit; " , (($gutter or $$spacing != 0) ? 'padding-left: 0; padding-right: 0; '  : '') , "}\n";
+    echo ".pull-$i, .nml$i { margin-left: -$val$unit; " , (($gutter or $$spacing != 0) ? 'padding-left: 0; padding-right: 0; '  : '') , "position: relative; }\n";
 ?>
 
 /*
-    Add these to a column to prepend empty columns using right margin spacing style.
+    Add these to prepend empty columns using left margin spacing style.
+*/
+<?php
+    for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
+    {
+        echo ".push-$i, .ml$i { margin-left: $val$unit; }\n";
+        $val += $box;
+    }
+    echo ".push-$i, .ml$i { margin-left: $val$unit; " , (($gutter or $$spacing != 0) ? 'padding-left: 0; padding-right: 0; '  : '') , "}\n";
+?>
+
+/*
+    Add these to append empty columns using right margin spacing style.
 */
 <?php
     for ($val = $box, $i = 1; $i < ($columns - 1); ++$i)
@@ -485,7 +497,7 @@ div.column, div.col
 ?>
 
 /*
-    Add these to a column to prepend empty columns using centering margin spacing style.
+    Add these to center columns using margin spacing style.
 */
 <?php
     for ($val = $box / 2, $i = 1; $i < ($columns - 1); ++$i)
