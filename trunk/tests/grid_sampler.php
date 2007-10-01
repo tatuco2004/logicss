@@ -22,14 +22,13 @@
     <link rel="stylesheet" type="text/css" href="../logicss/print.css" media="print" />
     <style type="text/css" media="screen, projection">
         @import '../logicss/font/mix.css';
-        @import '../logicss/typography/medium.css';
-
+        @import '../logicss/typography/small.css';
         @import '../logicss/grid/<?php echo clean($_GET['grid']); ?>.css';
 
         #container { background: white url('../gfx/grid10.gif') left top repeat; }
         #header { background: url('../gfx/ruler_bw.gif') left top no-repeat; }
-        #footer { background: white; border-top: 1px solid #333; text-align: right; }
-        #main div, #main span { background: #dedede; margin-bottom: .25em; text-align: center; }
+        #footer { background: #fafafa; border-top: 1px solid #333; text-align: right; }
+        #main div, #main span { background: #dedede; margin-bottom: .25em; line-height: 2em; text-align: center; }
     </style>
 </head>
 <body class="content">

@@ -26,14 +26,6 @@
 }
 
 /*
-    Remove HR from layout since they are inconsistent.
-*/
-hr
-{
-    display:        none;
-}
-
-/*
     Headings.
 */
 .content h1
@@ -169,4 +161,19 @@ hr
     *padding-top:   .75em;
 }
 
+/*
+    Bastard HR
+*/
+hr
+{
+    background:     #999;
+    border:         0;
+    color:          #999;
+    clear:          both;
+    display:        block;
+    height:         2px;
+    margin:         -1px 0 1.05em 0;
+    +margin-bottom: 3px;
+    +float:         left;
+}
 /* -------------------------------------------------------------------------- */
