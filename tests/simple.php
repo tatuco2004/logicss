@@ -20,17 +20,19 @@
     <link rel="stylesheet" type="text/css" href="../logicss/print.css" media="print" />
     <style type="text/css" media="screen, projection">
         @import '../logicss/font/mix.css';
-        @import '../logicss/typography/small.css';
+        @import '../logicss/typography/medium.css';
         @import '../logicss/grid/<?php echo $_GET['grid']; ?>.css';
 
         body { background: #2e3436; }
+        img { float: left; margin: .25em .5em .25em 0; }
         #container { margin-top: 1em; }
         #nav-sub { background-color: #888a85; }
         #content { background-color: #fafafa; }
-        #content img { float: left; margin: .25em .5em .25em 0; }
         #footer, #footer a { color: #888a85; }
         #footer { border-top: 1px solid #333; text-align: right; }
-        #content, #nav-sub { <?php echo (isset($_GET['line'])) ? "background: white url('../gfx/baseline-18.gif');" : ''; ?> }
+        #content, #nav-sub { <?php echo (isset($_GET['line'])) ? "background: white url('../gfx/baseline-21.gif');" : ''; ?> }
+
+        .pull7 { margin-left: -14em; }
     </style>
 </head>
 <body>
@@ -43,7 +45,7 @@
             <li><a href="#">Link 5</a></li>
             <li><a href="#">Link 6</a></li>
         </ul>
-        <div id="content" class="w17 last column pc1">
+        <div id="content" class="w16 last column pc2">
             <h1>Decameron</h1><h6>di Giovanni Boccaccio</h4>
             <hr />
             <p>Umana cosa è aver compassione degli afflitti: e come che a ciascuna persona stea bene, a coloro è massimamente richiesto
@@ -56,6 +58,7 @@ amata, ma per soverchio fuoco nella mente concetto da poco regolato appetito: il
 termine mi lasciava un tempo stare, più di noia che bisogno non m'era spesse volte sentir mi facea.</p><p>Nella qual noia tanto
 rifrigerio già mi porsero i piacevoli ragionamenti d'alcuno amico le sue laudevoli consolazioni, che io porto fermissima
 opinione per quelle essere avvenuto che io non sia morto.</p>
+            <img src="../gfx/img64.gif" class="pull-7" />
         </div>
     </div>
     <div id="footer" class="grid content">

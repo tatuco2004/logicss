@@ -131,61 +131,61 @@ div.column, div.col
 .span-24, .w24 { width: 47.5em; margin-left: 0; margin-right: 0; }
 
 /*
-    Add these to a column to prepend empty columns using default spacing style.
+    Add these to prepend empty columns using default spacing style.
 */
-.prepend-1, .pre-1 { margin-left: 2em; }
-.prepend-2, .pre-2 { margin-left: 4em; }
-.prepend-3, .pre-3 { margin-left: 6em; }
-.prepend-4, .pre-4 { margin-left: 8em; }
-.prepend-5, .pre-5 { margin-left: 10em; }
-.prepend-6, .pre-6 { margin-left: 12em; }
-.prepend-7, .pre-7 { margin-left: 14em; }
-.prepend-8, .pre-8 { margin-left: 16em; }
-.prepend-9, .pre-9 { margin-left: 18em; }
-.prepend-10, .pre-10 { margin-left: 20em; }
-.prepend-11, .pre-11 { margin-left: 22em; }
-.prepend-12, .pre-12 { margin-left: 24em; }
-.prepend-13, .pre-13 { margin-left: 26em; }
-.prepend-14, .pre-14 { margin-left: 28em; }
-.prepend-15, .pre-15 { margin-left: 30em; }
-.prepend-16, .pre-16 { margin-left: 32em; }
-.prepend-17, .pre-17 { margin-left: 34em; }
-.prepend-18, .pre-18 { margin-left: 36em; }
-.prepend-19, .pre-19 { margin-left: 38em; }
-.prepend-20, .pre-20 { margin-left: 40em; }
-.prepend-21, .pre-21 { margin-left: 42em; }
-.prepend-22, .pre-22 { margin-left: 44em; }
-.prepend-23, .pre-23 { margin-left: 46em; margin-right: 0; }
+.prepend-1, .pre1 { margin-left: 2em; }
+.prepend-2, .pre2 { margin-left: 4em; }
+.prepend-3, .pre3 { margin-left: 6em; }
+.prepend-4, .pre4 { margin-left: 8em; }
+.prepend-5, .pre5 { margin-left: 10em; }
+.prepend-6, .pre6 { margin-left: 12em; }
+.prepend-7, .pre7 { margin-left: 14em; }
+.prepend-8, .pre8 { margin-left: 16em; }
+.prepend-9, .pre9 { margin-left: 18em; }
+.prepend-10, .pre10 { margin-left: 20em; }
+.prepend-11, .pre11 { margin-left: 22em; }
+.prepend-12, .pre12 { margin-left: 24em; }
+.prepend-13, .pre13 { margin-left: 26em; }
+.prepend-14, .pre14 { margin-left: 28em; }
+.prepend-15, .pre15 { margin-left: 30em; }
+.prepend-16, .pre16 { margin-left: 32em; }
+.prepend-17, .pre17 { margin-left: 34em; }
+.prepend-18, .pre18 { margin-left: 36em; }
+.prepend-19, .pre19 { margin-left: 38em; }
+.prepend-20, .pre20 { margin-left: 40em; }
+.prepend-21, .pre21 { margin-left: 42em; }
+.prepend-22, .pre22 { margin-left: 44em; }
+.prepend-23, .pre23 { margin-left: 46em; margin-right: 0; }
 
 /*
-    Add these to a column to append empty columns using default spacing style.
+    Add these to append empty columns using default spacing style.
 */
-.append-1, .app-1 { margin-right: 2em; }
-.append-2, .app-2 { margin-right: 4em; }
-.append-3, .app-3 { margin-right: 6em; }
-.append-4, .app-4 { margin-right: 8em; }
-.append-5, .app-5 { margin-right: 10em; }
-.append-6, .app-6 { margin-right: 12em; }
-.append-7, .app-7 { margin-right: 14em; }
-.append-8, .app-8 { margin-right: 16em; }
-.append-9, .app-9 { margin-right: 18em; }
-.append-10, .app-10 { margin-right: 20em; }
-.append-11, .app-11 { margin-right: 22em; }
-.append-12, .app-12 { margin-right: 24em; }
-.append-13, .app-13 { margin-right: 26em; }
-.append-14, .app-14 { margin-right: 28em; }
-.append-15, .app-15 { margin-right: 30em; }
-.append-16, .app-16 { margin-right: 32em; }
-.append-17, .app-17 { margin-right: 34em; }
-.append-18, .app-18 { margin-right: 36em; }
-.append-19, .app-19 { margin-right: 38em; }
-.append-20, .app-20 { margin-right: 40em; }
-.append-21, .app-21 { margin-right: 42em; }
-.append-22, .app-22 { margin-right: 44em; }
-.append-23, .app-23 { margin-right: 46em; margin-left: 0; }
+.append-1, .app1 { margin-right: 2em; }
+.append-2, .app2 { margin-right: 4em; }
+.append-3, .app3 { margin-right: 6em; }
+.append-4, .app4 { margin-right: 8em; }
+.append-5, .app5 { margin-right: 10em; }
+.append-6, .app6 { margin-right: 12em; }
+.append-7, .app7 { margin-right: 14em; }
+.append-8, .app8 { margin-right: 16em; }
+.append-9, .app9 { margin-right: 18em; }
+.append-10, .app10 { margin-right: 20em; }
+.append-11, .app11 { margin-right: 22em; }
+.append-12, .app12 { margin-right: 24em; }
+.append-13, .app13 { margin-right: 26em; }
+.append-14, .app14 { margin-right: 28em; }
+.append-15, .app15 { margin-right: 30em; }
+.append-16, .app16 { margin-right: 32em; }
+.append-17, .app17 { margin-right: 34em; }
+.append-18, .app18 { margin-right: 36em; }
+.append-19, .app19 { margin-right: 38em; }
+.append-20, .app20 { margin-right: 40em; }
+.append-21, .app21 { margin-right: 42em; }
+.append-22, .app22 { margin-right: 44em; }
+.append-23, .app23 { margin-right: 46em; margin-left: 0; }
 
 /*
-    Add these to a column to prepend empty columns using left padding spacing style.
+    Add these to prepend empty columns using left padding spacing style.
 */
 .pl1 { padding-left: 2em; }
 .pl2 { padding-left: 4em; }
@@ -212,7 +212,7 @@ div.column, div.col
 .pl23 { padding-left: 46em; margin-left: 0; margin-right: 0; }
 
 /*
-    Add these to a column to prepend empty columns using right padding spacing style.
+    Add these to append empty columns using right padding spacing style.
 */
 .pr1 { padding-right: 2em; }
 .pr2 { padding-right: 4em; }
@@ -239,7 +239,7 @@ div.column, div.col
 .pr23 { padding-right: 46em; margin-left: 0; margin-right: 0; }
 
 /*
-    Add these to a column to prepend empty columns using centering padding spacing style.
+    Add these to center columns using padding spacing style.
 */
 .pc1 { padding-left: 1em; padding-right: 1em; }
 .pc2 { padding-left: 2em; padding-right: 2em; }
@@ -266,34 +266,61 @@ div.column, div.col
 .pc23 { padding-left: 23em; padding-right: 23em; margin-left: 0; margin-right: 0; }
 
 /*
-    Add these to a column to prepend empty columns using left margin spacing style.
+    Add these to apply a negative left margin spacing style.
 */
-.ml1 { margin-left: 2em; }
-.ml2 { margin-left: 4em; }
-.ml3 { margin-left: 6em; }
-.ml4 { margin-left: 8em; }
-.ml5 { margin-left: 10em; }
-.ml6 { margin-left: 12em; }
-.ml7 { margin-left: 14em; }
-.ml8 { margin-left: 16em; }
-.ml9 { margin-left: 18em; }
-.ml10 { margin-left: 20em; }
-.ml11 { margin-left: 22em; }
-.ml12 { margin-left: 24em; }
-.ml13 { margin-left: 26em; }
-.ml14 { margin-left: 28em; }
-.ml15 { margin-left: 30em; }
-.ml16 { margin-left: 32em; }
-.ml17 { margin-left: 34em; }
-.ml18 { margin-left: 36em; }
-.ml19 { margin-left: 38em; }
-.ml20 { margin-left: 40em; }
-.ml21 { margin-left: 42em; }
-.ml22 { margin-left: 44em; }
-.ml23 { margin-left: 46em; padding-left: 0; padding-right: 0; }
+.pull-1, .nml1 { margin-left: -2em; position: relative; }
+.pull-2, .nml2 { margin-left: -4em; position: relative; }
+.pull-3, .nml3 { margin-left: -6em; position: relative; }
+.pull-4, .nml4 { margin-left: -8em; position: relative; }
+.pull-5, .nml5 { margin-left: -10em; position: relative; }
+.pull-6, .nml6 { margin-left: -12em; position: relative; }
+.pull-7, .nml7 { margin-left: -14em; position: relative; }
+.pull-8, .nml8 { margin-left: -16em; position: relative; }
+.pull-9, .nml9 { margin-left: -18em; position: relative; }
+.pull-10, .nml10 { margin-left: -20em; position: relative; }
+.pull-11, .nml11 { margin-left: -22em; position: relative; }
+.pull-12, .nml12 { margin-left: -24em; position: relative; }
+.pull-13, .nml13 { margin-left: -26em; position: relative; }
+.pull-14, .nml14 { margin-left: -28em; position: relative; }
+.pull-15, .nml15 { margin-left: -30em; position: relative; }
+.pull-16, .nml16 { margin-left: -32em; position: relative; }
+.pull-17, .nml17 { margin-left: -34em; position: relative; }
+.pull-18, .nml18 { margin-left: -36em; position: relative; }
+.pull-19, .nml19 { margin-left: -38em; position: relative; }
+.pull-20, .nml20 { margin-left: -40em; position: relative; }
+.pull-21, .nml21 { margin-left: -42em; position: relative; }
+.pull-22, .nml22 { margin-left: -44em; position: relative; }
+.pull-23, .nml23 { margin-left: -46em; padding-left: 0; padding-right: 0; position: relative; }
 
 /*
-    Add these to a column to prepend empty columns using right margin spacing style.
+    Add these to prepend empty columns using left margin spacing style.
+*/
+.push-1, .ml1 { margin-left: 2em; }
+.push-2, .ml2 { margin-left: 4em; }
+.push-3, .ml3 { margin-left: 6em; }
+.push-4, .ml4 { margin-left: 8em; }
+.push-5, .ml5 { margin-left: 10em; }
+.push-6, .ml6 { margin-left: 12em; }
+.push-7, .ml7 { margin-left: 14em; }
+.push-8, .ml8 { margin-left: 16em; }
+.push-9, .ml9 { margin-left: 18em; }
+.push-10, .ml10 { margin-left: 20em; }
+.push-11, .ml11 { margin-left: 22em; }
+.push-12, .ml12 { margin-left: 24em; }
+.push-13, .ml13 { margin-left: 26em; }
+.push-14, .ml14 { margin-left: 28em; }
+.push-15, .ml15 { margin-left: 30em; }
+.push-16, .ml16 { margin-left: 32em; }
+.push-17, .ml17 { margin-left: 34em; }
+.push-18, .ml18 { margin-left: 36em; }
+.push-19, .ml19 { margin-left: 38em; }
+.push-20, .ml20 { margin-left: 40em; }
+.push-21, .ml21 { margin-left: 42em; }
+.push-22, .ml22 { margin-left: 44em; }
+.push-23, .ml23 { margin-left: 46em; padding-left: 0; padding-right: 0; }
+
+/*
+    Add these to append empty columns using right margin spacing style.
 */
 .mr1 { margin-right: 2em; }
 .mr2 { margin-right: 4em; }
@@ -320,7 +347,7 @@ div.column, div.col
 .mr23 { margin-right: 46em; padding-left: 0; padding-right: 0; }
 
 /*
-    Add these to a column to prepend empty columns using centering margin spacing style.
+    Add these to center columns using margin spacing style.
 */
 .mc1 { margin-left: 1em; margin-right: 1em; }
 .mc2 { margin-left: 2em; margin-right: 2em; }
