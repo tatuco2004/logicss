@@ -15,16 +15,16 @@
     <?php } # !unstyled ?>
 </head>
 <body>
-<div id="container" style="background: #2e3436; height: 600px;">
+<div id="container" style="background: #2e3436;">
     <div id="equal_row" class="equal">
-        <div id="a" class="first col w4" style="background: #4e9a06; height: 150px;">
-        first col w4 height: 150px
+        <div id="a" class="first col w4" style="background: #4e9a06;">
+        first col w4 height: auto
         </div>
-        <div id="b" class="last col w20" style="background: #5c3566; height: 400px;">
-        last col w20 height: 400px
+        <div id="b" class="last col w20" style="background: #5c3566; height: 20em;">
+        last col w20 height: 20em
         </div>
-    </div>    
-    <div id="c" class="col w24" style="border-top: 1px dotted pink;">
+    </div>
+    <div id="c" class="col w24" style="color: white;">
     Closer
     </div>
 </div>

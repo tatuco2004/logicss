@@ -22,7 +22,7 @@
 {
     *margin-left:   -7px;
 }
-.content form 
+.content form
 {
     overflow:       hidden;
 }
@@ -36,7 +36,7 @@
 {
     float:          left;
     font-weight:    bold;
-    width:          8em;
+    width:          12em;
 }
 .content form li span, .content form li ul, .content form li ol
 {
@@ -46,7 +46,7 @@
 .content li li label, .content form li span label
 {
     clear:          none;
-    width:          5em;
+    width:          6em;
 }
 .content input
 {
@@ -55,14 +55,14 @@
 }
 .content input, .content textarea, .content select
 {
-    font-family:    Calibri, Helvetica, Arial, sans-serif;
+    font-size:      .875em;
+    font-family:    Arial, sans-serif;
 }
 .content input[type='text'], .content input[type='password'],
 .content textarea, .content select
 {
     background:     #fafafa;
     border:         1px solid #babdb6;
-    color:          #babdb6;
 }
 .content input[type='text']:hover, .content input[type='password']:hover,
 .content textarea:hover, .content select:hover
@@ -74,7 +74,6 @@
 {
     background:     #fff;
     border-color:   #555753;
-    color:          #333;
 }
 .content .textarea
 {
@@ -84,7 +83,7 @@
 .content .buttons li
 {
     height:         1.5em;
-    padding:        .7em 0 .8em 9em;
+    padding:        .7em 0 .8em 13em;
 }
 
 /* -------------------------------------------------------------------------- */

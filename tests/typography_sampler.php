@@ -58,17 +58,17 @@
     }
     ?>
 </head>
-<body class="content"><hr />
+<body class="content">
 <p class="big">BIG P: Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
     <br />Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus.</p>
 <p>NORMAL P: Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
     <br />Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus.</p>
 <p class="small">SMALL P: Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
     <br />Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus.</p>
-<p>-</p>
+<hr />
 <div id="container">
 <?php if (isset($_GET['a'])) { ?>
-<h1>Heading 1</h1>
+<h1>Heading 1</h1><hr />
 <p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</p>
 <p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</p>
 
@@ -226,7 +226,8 @@ I am <u>the u tag</u> example
     <legend>Form legend</legend>
     <ol>
     <li><label for="f0">Text input:</label><input type="text" id="f0" value="input text" /></li>
-    <li><label for="f1">Text input:</label><span><input type="password" id="f1" value="input" /></span></li>
+    <li><label for="f1">Text input:</label><input type="password" id="f1" value="password" /></li>
+    <li><label for="f1w">Text input:</label><input type="password" id="f1w" value="" /></li>
     <li><label>Radio input:</label>
         <ol>
            <li><input name="RadioGroup1" type="radio" id="f2_0" value="Test" /><label for="f2_0">Yes</label></li>
