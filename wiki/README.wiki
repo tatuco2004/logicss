@@ -1,0 +1,20 @@
+#summary Welcome to the Logic CSS framework !
+#labels Featured
+
+== Introduction ==
+
+The Logic CSS framework is a collection of CSS files and PHP utilities to cut development times for web-standards compliant xHTML layouts.
+
+== What's in the box ==
+
+The main contents of the `logicss/` directory are:
+
+ * *`common.css`* which sets common values for styles since our objective is to have consistent rendering thru common browsers.
+ * *`typography/*.css`* these apply typography styles to content.
+ * *`font/*.css`* defines or mixes font families for page elements.
+ * *`grid/*.css`* gives you the ability to use grids to layout your design.
+ * other directories are actually to be considered _EXPERIMENTAL_.
+
+== The utilities in `tools/` ==
+
+For now, only the Grid Builder is available but there's also a semantic-aid tool in the works.
