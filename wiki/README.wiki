@@ -1,8 +1,30 @@
 #summary Welcome to the Logic CSS framework !
+http://logicss.googlecode.com/svn/trunk/gfx/logo_w.gif
+
+= Welcome to the Logic CSS framework ! =
+
+*NOTE:* Development snapshots are in the [http://code.google.com/p/logicss/downloads/list Downloads area].
 
 == Introduction ==
 
 The Logic CSS framework is a collection of CSS files and PHP utilities to cut development times for web-standards compliant xHTML layouts.
+
+== Features ==
+
+ * Common cross-browser rendering behavior (not a real reset ala Meyer or like `* {margin:0;padding:0;}` ).
+ * Typography with text resizing support (using EMs) and vertical baseline/rhythm.
+ * Totally customizable flexible layout grids with generation tool.
+   * Elastic with ems (best!)
+   * Liquid with percentages
+   * Fixed size using pixels
+
+== Planned features ==
+
+ * Easy to use, beautiful web palettes.
+ * Design patterns implementations (like breadcumbs).
+ * Microformats styling.
+ * Many others...
+ * If you partecipate in the development you can decide !
 
 == What's in the box ==
 
@@ -17,3 +39,20 @@ The main contents of the `logicss/` directory are:
 == The utilities in `tools/` ==
 
 For now, only the Grid Builder is available but there's also a semantic-aid tool in the works.
+
+== OPEN TO ANYONE TO PARTECIPATE ==
+
+Please if you like what has been done until now partecipate in the project. Everything can be useful, to start join us at our [http://groups.google.com/group/logicss Logic CSS Google Group].
+
+== License ==
+
+This framework is licensed under the [http://logicss.googlecode.com/svn/trunk/logicss/LICENSE MIT license] so you are nearly free to do anything you want with it.
+
+== Support ==
+
+For support questions, comments or suggestions on further development please come to our [http://groups.google.com/group/logicss Logic CSS Google Group] or send a mail to logicoder.at.gmail.com.
+
+== Credits ==
+Please consider this framework more like a library or collection of of tips and
+techniques originally found on the internet and taken together by the author/implementor.
+I will try to remember where I taken those ideas from and list them here but if you see something you originally did, well, let us know it ! we'll give credit were due.
