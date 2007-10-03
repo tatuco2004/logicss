@@ -276,15 +276,29 @@ if ($$spacing != 0)
  * Writes a selector with it's rules.
  *
  * @param   string  $name       Selector tag, id or class name
- * @param   string  $alt_name   Alternative selector tag, id or class name
+ * @param   mixed   $alt_name   Alternative selector tag, id or class name(s)
  * @param   string  $empty      Wheter to print empty selectors
  */
 function selector ($name, $alt_name = false, $empty = false)
 {
     global $_;
     if (!$empty and empty($_[$name])) return;
-    $alt_name = ($alt_name !== false) ? ", $alt_name" : '';
-    echo "$name$alt_name\n{\n";
+    $selectors = $name;
+    if ($alt_name !== false)
+    {
+        if (is_array($alt_name))
+        {
+            foreach($alt_name as $_name)
+            {
+                $selectors .= ", $_name";
+            }
+        }
+        else
+        {
+            $selectors .= ", $alt_name";
+        }
+    }
+    echo "$selectors\n{\n";
     rules($_[$name]);
     echo "}\n";
 }
@@ -328,18 +342,18 @@ define('nl', "\n")
     Define container for all columns.
 */
 <?php
-    selector('#container', '.grid');
+    selector('#container', array('#page', '.grid'));
     selector('body');
 ?>
 
 /*
     Ensure clearing.
 */
-#container, .grid, .clear
+#container, #page, .grid, .clear
 {
     zoom:           1;
 }
-#container:after, .grid:after, .clear:after
+#container:after, #page:after, .grid:after, .clear:after
 {
     clear:          both;
     content:        ".";

@@ -62,7 +62,7 @@ opinione per quelle essere avvenuto che io non sia morto.</p>
         </div>
     </div>
     <div id="footer" class="grid content">
-        <p>Copyright &copy; 2007 by <a href="http://marcodeltongo.com">Marco Del Tongo</a> et al. <a href="http://logicoder.com/logicss/LICENSE">Licensed under the MIT license.</a></p>
+        <p id="siteinfo-legal">Copyright &copy; 2007 by <a href="http://marcodeltongo.com">Marco Del Tongo</a> et al. <a href="http://logicoder.com/logicss/LICENSE">Licensed under the MIT license.</a></p>
     </div>
 </body>
 </html>
