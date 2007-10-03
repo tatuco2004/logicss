@@ -19,10 +19,16 @@
 {
     background:     #fff;
 }
+hr
+{
+    background:     #333;
+    color:          #333;
+    page-break-after: always;
+}
 body
 {
     color:          black;
-    font-family:    Constantia, "Palatino Linotype", Palatino, Georgia, serif;
+    font-family:    "Palatino Linotype", Palatino, Georgia, serif;
 }
 blockquote
 {

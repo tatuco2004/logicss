@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <title>Logic CSS framework : XHTML Grids Sampler</title>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="false" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta name="description" content="Logic CSS framework : XHTML Grids Sampler" />
+    <link rel="stylesheet" type="text/css" href="../logicss/common.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../logicss/print.css" media="print" />
+    <style type="text/css" media="screen, projection">
+        /*
+            Import choosen LogiCSS files.
+        */
+        @import '../logicss/font/mix.css';
+        @import '../logicss/typography/small.css';
+        @import '../logicss/grid/e24m.css';
+        @import '../logicss/palette/dark.css';
+
+        /*
+            Define local styles for your page.
+            Remember: "Test embedded, launch imported." - http://mezzoblue.com
+        */
+        /*#content { background: white url('../gfx/baseline-18.gif'); }*/
+    </style>
+</head>
+<body id="page-home">
+<div id="container">
+
+    <div id="header" class="grid">
+        <div id="branding" class="first col w12">
+            <img id="branding-logo" src="../gfx/logo.gif" alt="branding-logo" />
+            <!--<h3 id="branding-tagline">branding-tagline</h3>-->
+        </div><!-- end branding -->
+        <div id="search-box" class="last col w11 pl1">
+            <form id="search-form" method="post" action="">
+                <label for="search-keywords">Search</label>
+                <input id="search-keywords" name="search-keywords" type="text" />
+                <input id="search-submit" name="search-submit" type="submit" value="go" />
+            </form>
+        </div><!-- end search-box -->
+        <div id="nav-site" class="last col w8">
+            <ul>
+                <li id="nav-home"><a href="home.html">Home</a></li>
+                <li id="nav-articles"><a href="articles.html">Articles</a></li>
+                <li id="nav-archive"><a href="archive.html">Archive</a></li>
+                <li id="nav-about"><a href="about.html">About</a></li>
+                <li id="nav-contact"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div><!-- end nav-site -->
+        <hr />
+    </div><!-- end header -->
+
+    <div id="content" class="content grid">
+        <div id="nav-section" class="first col w5">
+            <h4>Sections:</h4>
+            <ul>
+                <li><a href="somewhere.html">Content page 1</a></li>
+                <li><a href="somewhere.html">Content page 2</a></li>
+                <li><a href="somewhere.html">Content page 3</a></li>
+                <li><a href="somewhere.html">Content page 4</a></li>
+                <li><a href="somewhere.html">Content page 5</a></li>
+                <li><a href="somewhere.html">Content page 6</a></li>
+            </ul>
+        </div><!-- end nav-section -->
+        <div id="content-main" class="col w13">
+            <h1>Main</h1>
+            <h2>Subheading</h2>
+            <p class="caps">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut ac leo in lorem ultricies sollicitudin. Vivamus molestie elit nec nulla. Suspendisse potenti. Suspendisse at lorem. Donec pulvinar, magna eget molestie pretium, justo sem iaculis urna, eget condimentum nibh augue pellentesque arcu. Integer tristique tempor mauris. Sed justo orci, commodo volutpat, sagittis vitae, varius vitae, massa. Maecenas pede ligula, iaculis sit amet, pharetra eu, adipiscing consectetuer, eros. Duis ullamcorper nisl ac magna. Nunc neque dolor, posuere dapibus, convallis non, tristique sed, nibh. Suspendisse quis leo. Phasellus pretium erat ut purus. Duis facilisis consectetuer sapien. Nulla eget pede ut nisl faucibus consequat. Quisque erat lectus, luctus in, pellentesque ac, adipiscing eu, enim. Donec ultrices laoreet urna.</p>
+            <h2>Subheading</h2>
+            <p>Pellentesque ac odio et nulla adipiscing fermentum. Proin nibh lorem, rhoncus et, commodo non, consequat vitae, sem. Donec a orci. Sed a wisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer nulla enim, ornare volutpat, semper et, malesuada ut, sapien. Vestibulum convallis, est sed lacinia accumsan, felis ipsum sollicitudin est, a dapibus dui dui dictum neque. In hac habitasse platea dictumst. Donec non mi. Phasellus facilisis, est ornare facilisis rhoncus, nisl velit malesuada urna, et adipiscing elit enim vitae metus. Maecenas dapibus. Sed erat. Nulla congue wisi sit amet dui.</p>
+            <p>Vestibulum vitae tellus. Fusce quis ligula. Cras mi. Mauris congue, lacus eget rhoncus venenatis, mi nunc volutpat nisl, ut ornare erat augue quis mauris. Nulla in sem. Donec semper odio ac ante. Cras a libero in risus mattis commodo. Phasellus pellentesque lectus. Donec a mi. Integer euismod neque at arcu. Morbi ligula nulla, dapibus nec, fermentum ut, tristique vel, pede. Morbi at diam. Vestibulum quam. Cras consectetuer wisi id neque. Etiam dictum vulputate ligula. Aliquam erat volutpat. Proin vitae lorem in justo imperdiet nonummy. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse leo. Sed in eros ut lectus lacinia condimentum. </p>
+        </div><!-- end content-main -->
+        <div id="content-sub" class="last col w6">
+            <h2>Sub</h2>
+            <p>Proin pellentesque ullamcorper ipsum. Sed tincidunt tincidunt mi. Vestibulum magna wisi, vehicula eu, ullamcorper et, egestas in, tortor. Vestibulum interdum, massa in faucibus laoreet, tortor massa congue ligula, et feugiat elit mauris nec enim. Phasellus pellentesque tellus nec nisl. Mauris dignissim iaculis leo. Maecenas id lorem. Aenean tortor eros, dignissim eu, vehicula id, dictum eu, neque. Maecenas nisl. Proin dui lacus, aliquam eget, volutpat vel, aliquam quis, velit. Proin neque. Etiam turpis odio, tincidunt id, accumsan tincidunt, mollis a, nibh. Donec porta.</p>
+        </div><!-- end content-sub -->
+        <hr />
+    </div><!-- end content -->
+
+    <div id="footer">
+        <p id="siteinfo-legal" class="content">Copyright &copy; 2007 by <a href="http://marcodeltongo.com">Marco Del Tongo</a> et al. <a href="http://logicoder.com/logicss/LICENSE">Licensed under the MIT license.</a></p>
+    </div><!-- end footer -->
+
+</div><!-- end container -->
+</body>
+</html>
