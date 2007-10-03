@@ -1,5 +1,4 @@
 #summary Welcome to the Logic CSS framework !
-#labels Featured
 
 == Introduction ==
 
