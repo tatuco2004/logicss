@@ -27,7 +27,7 @@
     if (!isset($_GET['unstyled'])) {
         echo '<link rel="stylesheet" type="text/css" href="../logicss/common.css" media="all" />' . "\n";
         echo '<link rel="stylesheet" type="text/css" href="../logicss/print.css" media="print" />' . "\n";
-        echo '<style type="text/css" media="screen, projection">' . "\n";
+        echo '<style type="text/css" media="screen">' . "\n";
         if (isset($_GET['font']))
         {
             $_GET['font'] = clean($_GET['font']);

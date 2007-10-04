@@ -18,7 +18,7 @@
     <meta name="description" content="Logic CSS framework : Simple Sampler" />
     <link rel="stylesheet" type="text/css" href="../logicss/common.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../logicss/print.css" media="print" />
-    <style type="text/css" media="screen, projection">
+    <style type="text/css" media="screen">
         @import '../logicss/font/mix.css';
         @import '../logicss/typography/medium.css';
         @import '../logicss/grid/<?php echo $_GET['grid']; ?>.css';
