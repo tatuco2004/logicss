@@ -17,7 +17,58 @@
 /*
     TO DO:
 
-    - Vertical alignment
+    - Vertical alignment ???
+*/
+
+/*
+    Commodity functions.
+*/
+
+/**
+ * Writes a selector with it's rules.
+ *
+ * @param   string  $name       Selector tag, id or class name
+ * @param   mixed   $alt_name   Alternative selector tag, id or class name(s)
+ * @param   string  $empty      Wheter to print empty selectors
+ */
+function selector ($name, $alt_name = false, $empty = false)
+{
+    global $_;
+    if (!$empty and empty($_[$name])) return;
+    $selectors = $name;
+    if ($alt_name !== false)
+    {
+        if (is_array($alt_name))
+        {
+            foreach($alt_name as $_name)
+            {
+                $selectors .= ", $_name";
+            }
+        }
+        else
+        {
+            $selectors .= ", $alt_name";
+        }
+    }
+    echo "$selectors\n{\n";
+    rules($_[$name]);
+    echo "}\n";
+}
+
+/**
+ * Write CSS rules.
+ */
+function rules (&$data)
+{
+    ksort($data);
+    foreach ($data as $rule => $value)
+    {
+        echo str_pad("    $rule: ", 20), $value, ";\n";
+    }
+}
+
+/*
+    INPUT DATA
 */
 
 // NAME
@@ -265,53 +316,6 @@ if ($$spacing != 0)
                 $_['.margin']['padding-right'] = 0;
             }
         break;
-    }
-}
-
-/*
-    Commodity functions.
-*/
-
-/**
- * Writes a selector with it's rules.
- *
- * @param   string  $name       Selector tag, id or class name
- * @param   mixed   $alt_name   Alternative selector tag, id or class name(s)
- * @param   string  $empty      Wheter to print empty selectors
- */
-function selector ($name, $alt_name = false, $empty = false)
-{
-    global $_;
-    if (!$empty and empty($_[$name])) return;
-    $selectors = $name;
-    if ($alt_name !== false)
-    {
-        if (is_array($alt_name))
-        {
-            foreach($alt_name as $_name)
-            {
-                $selectors .= ", $_name";
-            }
-        }
-        else
-        {
-            $selectors .= ", $alt_name";
-        }
-    }
-    echo "$selectors\n{\n";
-    rules($_[$name]);
-    echo "}\n";
-}
-
-/**
- * Write CSS rules.
- */
-function rules (&$data)
-{
-    ksort($data);
-    foreach ($data as $rule => $value)
-    {
-        echo str_pad("    $rule: ", 20), $value, ";\n";
     }
 }
 
