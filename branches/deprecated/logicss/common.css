@@ -1,0 +1,215 @@
+/**
+ * LogiCSS - Logic CSS framework
+ * http://logicss.googlecode.com
+ * http://logicoder.com/logicss/
+ *
+ * Set common values for styles.
+ * Our objective is to have consistent rendering thru common browsers.
+ *
+ * Copyright (c) 2007 Marco Del Tongo et al.
+ * Licensed under the MIT license.
+ *
+ * $Rev$
+ * $Author$
+ * $HeadURL$
+ */
+
+/* -------------------------------------------------------------------------- */
+
+/*
+    Reset margins and paddings on some block tags
+*/
+html, body, address, blockquote, p, pre, h1, h2, h3, h4, h5, h6, li,
+form, legend, fieldset, input, textarea, select, form ul, form ol
+{
+    margin:         0;
+    padding:        0;
+    text-indent:    0;
+}
+
+html
+{
+    font-size:      100.01%;
+}
+body
+{
+    background:     #fafafa;
+    color:          #333;
+    font-family:    sans-serif;
+    font-size:      1em;
+    font-style:     normal;
+    font-weight:    normal;
+    line-height:    1;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size:      1em;
+    line-height:    1.5;
+}
+
+blockquote:before, blockquote:after, q:before, q:after
+{
+    content:    "";
+}
+
+hr
+{
+    display:    none;
+}
+
+/*
+    SOME INLINE ELEMENTS
+*/
+
+abbr, acronym
+{
+    font-size:          .75em;
+    letter-spacing:     .1em;
+    text-transform:     uppercase;
+}
+a img, a abbr, a acronym
+{
+    border:             none;
+}
+a:active
+{
+    outline: none;
+}
+abbr[title], acronym[title], dfn[title]
+{
+    border-bottom:      1px dotted;
+    cursor:             help;
+}
+dfn
+{
+    font-style:         normal;
+}
+sup, sub
+{
+    font-size:          .75em;
+    font-style:         italic;
+    line-height:        1;
+    position:           relative;
+    vertical-align:     baseline;
+}
+sup
+{
+    top:    -.5em;
+}
+sub
+{
+    top:    .25em;
+}
+
+/*
+    LIST ELEMENTS
+*/
+
+ul, ol
+{
+    margin:             0 0 0 2em;
+    padding:            0;
+    text-indent:        0;
+}
+
+/*
+    FORM ELEMENTS
+*/
+
+input, textarea, select
+{
+    font-size:          1em;
+    font-style:         inherit;
+    font-weight:        inherit;
+}
+fieldset
+{
+    border:             0;
+}
+legend
+{
+    color:              #000;
+    line-height:        2.25;
+    font-weight:        bold;
+}
+label
+{
+    clear:              left;
+    margin-right:       1em;
+}
+form li
+{
+    list-style:         none;
+    padding-bottom:     .75em;
+    padding-top:        .75em;
+}
+form li li
+{
+    padding-top:        0;
+    padding-bottom:     1.5em;
+}
+form li ol, form li ul
+{
+    padding-top:        .75em;
+    margin-bottom:      -.75em;
+}
+input
+{
+    margin-right:       .5em;
+}
+input, select, label[for]
+{
+    cursor:             pointer;
+}
+input[type='text'], input[type='password']
+{
+    cursor:             text;
+}
+select
+{
+    vertical-align:     top;
+    margin-bottom:      -.5em;
+}
+textarea
+{
+    height:             4em;
+    vertical-align:     top;
+    width:              30em;
+}
+
+/*
+    TABLE
+*/
+
+table
+{
+    border-collapse:    collapse;
+    border-color:       #000;
+    border-left:        .05em solid;
+    border-spacing:     0;
+    border-top:         .05em solid;
+    margin:             0 1em;
+}
+td, th
+{
+    border-bottom:      .05em solid;
+    border-right:       .05em solid;
+    text-align:         center;
+}
+caption
+{
+    line-height:        1.5;
+}
+
+/*
+    DEPRECATED ELEMENTS
+*/
+
+font
+{
+    color:  inherit !important;
+    font:   inherit !important;
+}
+
+/* -------------------------------------------------------------------------- */

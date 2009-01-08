@@ -1,0 +1,41 @@
+/**
+ * LogiCSS - Logic CSS framework
+ * http://logicss.googlecode.com
+ * http://logicoder.com/logicss/
+ *
+ * Fonts families for Vista, MacOSX and Linux in classes.
+ *
+ * Copyright (c) 2007 Marco Del Tongo et al.
+ * Licensed under the MIT license.
+ *
+ * $Rev$
+ * $Author$
+ * $HeadURL$
+ */
+
+/* -------------------------------------------------------------------------- */
+
+.sans
+{
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+.sans2
+{
+    font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
+}
+.sans3
+{
+    font-family: Candara, "Trebuchet MS", Trebuchet, sans-serif;
+}
+.serif
+{
+    font-family: Cambria, "Times New Roman", Times, serif;
+}
+.serif2
+{
+    font-family: Constantia, "Palatino Linotype", Palatino, Georgia, serif;
+}
+.mono
+{
+    font-family: Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
