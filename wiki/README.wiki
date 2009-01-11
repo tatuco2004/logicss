@@ -1,5 +1,5 @@
 #summary Welcome to the Logic CSS framework !
-http://logicss.googlecode.com/svn/trunk/media/images/logo_light.png
+http://logicss.googlecode.com/svn/trunk/media/images/logo_light_trans.png
 
 = Welcome to the Logic CSS framework ! =
 
